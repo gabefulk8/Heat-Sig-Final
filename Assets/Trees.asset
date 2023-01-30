@@ -1,0 +1,209 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e8fda743b539a043b220ae6e99779c2, type: 3}
+  m_Name: Trees
+  m_EditorClassIdentifier: 
+  prototypes:
+  - prefab: {fileID: 7205115216976058251, guid: 6646e5ba110e32e42a6aaf7e07c1f9e2,
+      type: 3}
+    sharedMesh: {fileID: 4300000, guid: 7e94ebbb53879a640bfda040fde1e961, type: 2}
+    sharedMaterials:
+    - {fileID: 2100000, guid: e4a86aa7622470041951791769c77fc4, type: 2}
+    - {fileID: 2100008, guid: 511bff9343fa35a43acd7e694c821924, type: 3}
+    - {fileID: 2100000, guid: af8304d6fbc94c74c888c561473faaa2, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: 0
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/Assets From Packages/Borealis - Low Poly Tundra/Prefabs/Trees/Conifer/Edited
+      Trees/Small Fir 1.prefab
+  - prefab: {fileID: 8270587947278137255, guid: 4707b176902949047b29d413fb3c070c,
+      type: 3}
+    sharedMesh: {fileID: 4300000, guid: 7a613c9fc089b8e4d9d4a3d04ae18fdf, type: 2}
+    sharedMaterials:
+    - {fileID: 2100000, guid: af8304d6fbc94c74c888c561473faaa2, type: 2}
+    - {fileID: 2100000, guid: e1dcabb5eac20be4f84736dcc4dec2e2, type: 2}
+    - {fileID: 2100008, guid: 511bff9343fa35a43acd7e694c821924, type: 3}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: 0
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/Assets From Packages/Borealis - Low Poly Tundra/Prefabs/Trees/Conifer/Edited
+      Trees/Small Fir 2.prefab
+  - prefab: {fileID: 8535735921513476676, guid: d2559ce60d7126845b0eaef18258367d,
+      type: 3}
+    sharedMesh: {fileID: 4300000, guid: 5855b8d270dfaab4bb3f43d147011fa7, type: 2}
+    sharedMaterials:
+    - {fileID: 2100000, guid: af8304d6fbc94c74c888c561473faaa2, type: 2}
+    - {fileID: 2100000, guid: 00d1ce919b3903a41adce141f0ae7cc3, type: 2}
+    - {fileID: 2100008, guid: 511bff9343fa35a43acd7e694c821924, type: 3}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: 0
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/Assets From Packages/Borealis - Low Poly Tundra/Prefabs/Trees/Conifer/Edited
+      Trees/Tall Fir 1.prefab
+  - prefab: {fileID: 4015153787851555482, guid: f6db8ad3b9a55224ebf2615ae78ae290,
+      type: 3}
+    sharedMesh: {fileID: 4300000, guid: e4c5d2f797e47ff499e106d9a8ee22f8, type: 2}
+    sharedMaterials:
+    - {fileID: 2100000, guid: af8304d6fbc94c74c888c561473faaa2, type: 2}
+    - {fileID: 2100000, guid: e1dcabb5eac20be4f84736dcc4dec2e2, type: 2}
+    - {fileID: 2100008, guid: 511bff9343fa35a43acd7e694c821924, type: 3}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: 0
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/Assets From Packages/Borealis - Low Poly Tundra/Prefabs/Trees/Conifer/Edited
+      Trees/Tall Fir 2.prefab
+  - prefab: {fileID: 2365293622235065526, guid: 434d5fc2ac6a50d46b8ab9050ef65215,
+      type: 3}
+    sharedMesh: {fileID: 4300000, guid: cbb921d3b9270474d9ea3e07e19995b8, type: 2}
+    sharedMaterials:
+    - {fileID: 2100000, guid: af8304d6fbc94c74c888c561473faaa2, type: 2}
+    - {fileID: 2100000, guid: a159bb6061db69245930d01f20146188, type: 2}
+    - {fileID: 2100008, guid: 511bff9343fa35a43acd7e694c821924, type: 3}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: 0
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/Assets From Packages/Borealis - Low Poly Tundra/Prefabs/Trees/Conifer/Edited
+      Trees/Tall Fir 3.prefab
+  - prefab: {fileID: 1245719661028582, guid: 5eebd3e3693ab874389f95e8336e0921, type: 3}
+    sharedMesh: {fileID: 4300000, guid: 511bff9343fa35a43acd7e694c821924, type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: af8304d6fbc94c74c888c561473faaa2, type: 2}
+    - {fileID: 2100000, guid: e4a86aa7622470041951791769c77fc4, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: 0
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/Assets From Packages/Borealis - Low Poly Tundra/Prefabs/Trees/Conifer/Conifer
+      Tree.prefab
+  - prefab: {fileID: 1965622022768518, guid: e8aa65d4c3a95e841b431309a58ce0a8, type: 3}
+    sharedMesh: {fileID: 4300010, guid: 511bff9343fa35a43acd7e694c821924, type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: af8304d6fbc94c74c888c561473faaa2, type: 2}
+    - {fileID: 2100000, guid: e4a86aa7622470041951791769c77fc4, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: 0
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/Assets From Packages/Borealis - Low Poly Tundra/Prefabs/Trees/Conifer/Conifer
+      Tree 2.prefab
+  - prefab: {fileID: 1319642862179408, guid: f0df2da8904d28a458794e1f3263d2e6, type: 3}
+    sharedMesh: {fileID: 4300008, guid: 511bff9343fa35a43acd7e694c821924, type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: af8304d6fbc94c74c888c561473faaa2, type: 2}
+    - {fileID: 2100000, guid: e4a86aa7622470041951791769c77fc4, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: 0
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/Assets From Packages/Borealis - Low Poly Tundra/Prefabs/Trees/Conifer/Conifer
+      Tree 3.prefab
