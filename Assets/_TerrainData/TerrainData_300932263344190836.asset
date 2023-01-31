@@ -3063,8 +3063,8 @@ MonoBehaviour:
   drawTrees: 1
   drawGrasses: 1
   enableInstancing: 1
-  billboardStart: 100
-  treeDistance: 200
+  billboardStart: 500
+  treeDistance: 500
   grassDistance: 100
   grassFadeStart: 0.75
 --- !u!28 &-2612055517832217844

@@ -150,7 +150,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   terrainData: {fileID: 11400000}
   trees: {fileID: 11400000, guid: 6e7f386a76372614f85c9cc4bc2eddef, type: 2}
-  treeInstances: []
+  treeInstances:
+  - prototypeIndex: 4
+    position: {x: 0.75338125, y: 0.1496577, z: 0.013232178}
+    rotation: {x: 0, y: 0.7634789, z: 0, w: 0.6458328}
+    scale: {x: 0.83725697, y: 0.93725693, z: 0.83725697}
+  - prototypeIndex: 0
+    position: {x: 0.5816465, y: 0.14431606, z: 0.06484375}
+    rotation: {x: 0, y: 0.28656843, z: 0, w: -0.9580598}
+    scale: {x: 0.8127433, y: 0.9127433, z: 0.8127433}
+  - prototypeIndex: 2
+    position: {x: 0.46896288, y: 0.14404385, z: 0.0539574}
+    rotation: {x: 0, y: 0.3388331, z: 0, w: 0.9408465}
+    scale: {x: 1.0956274, y: 1.1956275, z: 1.0956274}
+  - prototypeIndex: 7
+    position: {x: 0.5512472, y: 0.15071005, z: 0.010588257}
+    rotation: {x: 0, y: 0.77646774, z: 0, w: 0.630157}
+    scale: {x: 0.8145386, y: 0.91453856, z: 0.8145386}
+  - prototypeIndex: 3
+    position: {x: 0.384906, y: 0.14518073, z: 0.012790589}
+    rotation: {x: 0, y: 0.66743314, z: 0, w: -0.74466974}
+    scale: {x: 1.0392234, y: 1.1392233, z: 1.0392234}
+  - prototypeIndex: 3
+    position: {x: 0.50943273, y: 0.14849994, z: 0.032643434}
+    rotation: {x: 0, y: 0.7944848, z: 0, w: -0.60728407}
+    scale: {x: 0.8293065, y: 0.9293065, z: 0.8293065}
+  - prototypeIndex: 5
+    position: {x: 0.4105271, y: 0.14287548, z: 0.058485106}
+    rotation: {x: 0, y: 0.7941887, z: 0, w: 0.60767126}
+    scale: {x: 1.0427766, y: 1.1427766, z: 1.0427766}
   treeSnapMode: 0
   treeSnapLayerMask:
     serializedVersion: 2
