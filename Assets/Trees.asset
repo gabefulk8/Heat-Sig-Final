@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Trees
   m_EditorClassIdentifier: 
   prototypes:
-  - prefab: {fileID: 7205115216976058251, guid: 6646e5ba110e32e42a6aaf7e07c1f9e2,
-      type: 3}
+  - prefab: {fileID: 7205115216976058251, guid: 6646e5ba110e32e42a6aaf7e07c1f9e2, type: 3}
     sharedMesh: {fileID: 4300000, guid: 7e94ebbb53879a640bfda040fde1e961, type: 2}
     sharedMaterials:
     - {fileID: 2100000, guid: e4a86aa7622470041951791769c77fc4, type: 2}
@@ -38,8 +37,7 @@ MonoBehaviour:
     baseScale: {x: 1, y: 1, z: 1}
     editor_PrefabAssetPath: Assets/Assets From Packages/Borealis - Low Poly Tundra/Prefabs/Trees/Conifer/Edited
       Trees/Small Fir 1.prefab
-  - prefab: {fileID: 8270587947278137255, guid: 4707b176902949047b29d413fb3c070c,
-      type: 3}
+  - prefab: {fileID: 8270587947278137255, guid: 4707b176902949047b29d413fb3c070c, type: 3}
     sharedMesh: {fileID: 4300000, guid: 7a613c9fc089b8e4d9d4a3d04ae18fdf, type: 2}
     sharedMaterials:
     - {fileID: 2100000, guid: af8304d6fbc94c74c888c561473faaa2, type: 2}
@@ -63,8 +61,7 @@ MonoBehaviour:
     baseScale: {x: 1, y: 1, z: 1}
     editor_PrefabAssetPath: Assets/Assets From Packages/Borealis - Low Poly Tundra/Prefabs/Trees/Conifer/Edited
       Trees/Small Fir 2.prefab
-  - prefab: {fileID: 8535735921513476676, guid: d2559ce60d7126845b0eaef18258367d,
-      type: 3}
+  - prefab: {fileID: 8535735921513476676, guid: d2559ce60d7126845b0eaef18258367d, type: 3}
     sharedMesh: {fileID: 4300000, guid: 5855b8d270dfaab4bb3f43d147011fa7, type: 2}
     sharedMaterials:
     - {fileID: 2100000, guid: af8304d6fbc94c74c888c561473faaa2, type: 2}
@@ -88,8 +85,7 @@ MonoBehaviour:
     baseScale: {x: 1, y: 1, z: 1}
     editor_PrefabAssetPath: Assets/Assets From Packages/Borealis - Low Poly Tundra/Prefabs/Trees/Conifer/Edited
       Trees/Tall Fir 1.prefab
-  - prefab: {fileID: 4015153787851555482, guid: f6db8ad3b9a55224ebf2615ae78ae290,
-      type: 3}
+  - prefab: {fileID: 4015153787851555482, guid: f6db8ad3b9a55224ebf2615ae78ae290, type: 3}
     sharedMesh: {fileID: 4300000, guid: e4c5d2f797e47ff499e106d9a8ee22f8, type: 2}
     sharedMaterials:
     - {fileID: 2100000, guid: af8304d6fbc94c74c888c561473faaa2, type: 2}
@@ -113,8 +109,7 @@ MonoBehaviour:
     baseScale: {x: 1, y: 1, z: 1}
     editor_PrefabAssetPath: Assets/Assets From Packages/Borealis - Low Poly Tundra/Prefabs/Trees/Conifer/Edited
       Trees/Tall Fir 2.prefab
-  - prefab: {fileID: 2365293622235065526, guid: 434d5fc2ac6a50d46b8ab9050ef65215,
-      type: 3}
+  - prefab: {fileID: 2365293622235065526, guid: 434d5fc2ac6a50d46b8ab9050ef65215, type: 3}
     sharedMesh: {fileID: 4300000, guid: cbb921d3b9270474d9ea3e07e19995b8, type: 2}
     sharedMaterials:
     - {fileID: 2100000, guid: af8304d6fbc94c74c888c561473faaa2, type: 2}
