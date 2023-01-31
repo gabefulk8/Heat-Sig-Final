@@ -125,9 +125,9 @@ MonoBehaviour:
   colorByNormalPropertyName: _ColorByNormal
   colorBlendPropertyName: _ColorBlend
   dimensionPropertyName: _Dimension
-  colorByHeightMap: {fileID: 3962894068330091114}
-  colorByNormalMap: {fileID: -5222325423639987558}
-  colorBlendMap: {fileID: -3107815328685128615}
+  colorByHeightMap: {fileID: 994379078953447120}
+  colorByNormalMap: {fileID: -2200805883065331814}
+  colorBlendMap: {fileID: -1886496314487255327}
   splats: {fileID: 11400000, guid: a3cfde07cd0a9f4488f10294d27e360e, type: 2}
   splatControlResolution: 512
   splatControls: []
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: Foliage
   m_EditorClassIdentifier: 
   terrainData: {fileID: 11400000}
-  trees: {fileID: 11400000, guid: 6e7f386a76372614f85c9cc4bc2eddef, type: 2}
+  trees: {fileID: 11400000, guid: 0af7475bfa20a88428c4fdadbd83fa37, type: 2}
   treeInstances: []
   treeSnapMode: 0
   treeSnapLayerMask:
@@ -2983,7 +2983,44 @@ MonoBehaviour:
   bendSensitive: 1
   restoreSensitive: 0.03
   grassVersion: 2021.1
---- !u!28 &-5222325423639987558
+--- !u!114 &-5208196639010036263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba2bd1d74124a54d8737ba971cd7633, type: 3}
+  m_Name: Mask
+  m_EditorClassIdentifier: 
+  terrainData: {fileID: 11400000}
+  maskMapResolution: 256
+  maskMap: {fileID: 0}
+--- !u!114 &-2540009102671822862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a04edb346a8b34c84035bf9a24b795, type: 3}
+  m_Name: Rendering
+  m_EditorClassIdentifier: 
+  terrainData: {fileID: 11400000}
+  castShadow: 1
+  receiveShadow: 1
+  drawTrees: 1
+  drawGrasses: 1
+  enableInstancing: 1
+  billboardStart: 100
+  treeDistance: 200
+  grassDistance: 100
+  grassFadeStart: 0.75
+--- !u!28 &-2200805883065331814
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3030,22 +3067,7 @@ Texture2D:
     offset: 0
     size: 0
     path: 
---- !u!114 &-5208196639010036263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aba2bd1d74124a54d8737ba971cd7633, type: 3}
-  m_Name: Mask
-  m_EditorClassIdentifier: 
-  terrainData: {fileID: 11400000}
-  maskMapResolution: 256
-  maskMap: {fileID: 0}
---- !u!28 &-3107815328685128615
+--- !u!28 &-1886496314487255327
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3092,28 +3114,6 @@ Texture2D:
     offset: 0
     size: 0
     path: 
---- !u!114 &-2540009102671822862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6a04edb346a8b34c84035bf9a24b795, type: 3}
-  m_Name: Rendering
-  m_EditorClassIdentifier: 
-  terrainData: {fileID: 11400000}
-  castShadow: 1
-  receiveShadow: 1
-  drawTrees: 1
-  drawGrasses: 1
-  enableInstancing: 1
-  billboardStart: 500
-  treeDistance: 500
-  grassDistance: 100
-  grassFadeStart: 0.75
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3133,38 +3133,7 @@ MonoBehaviour:
   foliage: {fileID: -5870298140300461524}
   mask: {fileID: -5208196639010036263}
   geometryData: {fileID: 11400000, guid: 9fc18a3bff47f62499dac2212ce1653f, type: 2}
---- !u!114 &2014770699623136198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da65cc640ca49214eaaf69531b38de16, type: 3}
-  m_Name: Geometry
-  m_EditorClassIdentifier: 
-  terrainData: {fileID: 11400000}
-  width: 500
-  height: 500
-  length: 500
-  heightMapResolution: 512
-  heightMap: {fileID: 6907919259099560489}
-  heightmapVersion: 2021.1
-  meshBaseResolution: 6
-  meshResolution: 10
-  chunkGridSize: 5
-  lodCount: 1
-  displacementSeed: 12345
-  displacementStrength: 0
-  albedoToVertexColorMode: 0
-  storageMode: 0
-  allowTimeSlicedGeneration: 0
-  smoothNormal: 0
-  useSmoothNormalMask: 0
-  mergeUv: 0
---- !u!28 &3962894068330091114
+--- !u!28 &994379078953447120
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3211,6 +3180,37 @@ Texture2D:
     offset: 0
     size: 0
     path: 
+--- !u!114 &2014770699623136198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da65cc640ca49214eaaf69531b38de16, type: 3}
+  m_Name: Geometry
+  m_EditorClassIdentifier: 
+  terrainData: {fileID: 11400000}
+  width: 500
+  height: 500
+  length: 500
+  heightMapResolution: 512
+  heightMap: {fileID: 6907919259099560489}
+  heightmapVersion: 2021.1
+  meshBaseResolution: 6
+  meshResolution: 10
+  chunkGridSize: 5
+  lodCount: 1
+  displacementSeed: 12345
+  displacementStrength: 0
+  albedoToVertexColorMode: 0
+  storageMode: 0
+  allowTimeSlicedGeneration: 0
+  smoothNormal: 0
+  useSmoothNormalMask: 0
+  mergeUv: 0
 --- !u!28 &6907919259099560489
 Texture2D:
   m_ObjectHideFlags: 0
