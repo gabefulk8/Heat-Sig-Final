@@ -238,6 +238,7 @@ namespace Pinwheel.Griffin.SplineTool
                 GUI.enabled = instance.SpawnTrees || instance.SpawnGrasses;
                 if (GUILayout.Button(btnLabel))
                 {
+                    GAnalytics.Record(GAnalytics.SPLINE_FOLIAGE_SPAWNER);
                     List<GStylizedTerrain> terrains = GUtilities.ExtractTerrainsFromOverlapTest(instance.SplineCreator.SweepTest());
                     CreateInitialBackup(terrains);
                     Apply();

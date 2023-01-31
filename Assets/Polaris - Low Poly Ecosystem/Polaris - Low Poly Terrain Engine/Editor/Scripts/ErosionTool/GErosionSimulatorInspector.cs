@@ -207,6 +207,7 @@ namespace Pinwheel.Griffin.ErosionTool
 
                 if (GUILayout.Button(GHydraulicConfigsGUI.SIMULATE_LABEL))
                 {
+                    GAnalytics.Record(GAnalytics.HYDRAULIC_EROSION);
                     instance.SimulateHydraulicErosion();
                 }
             });
@@ -247,6 +248,7 @@ namespace Pinwheel.Griffin.ErosionTool
 
                 if (GUILayout.Button(GThermalGUI.SIMULATE_LABEL))
                 {
+                    GAnalytics.Record(GAnalytics.THERMAL_EROSION);
                     instance.SimulateThermalErosion();
                 }
             });

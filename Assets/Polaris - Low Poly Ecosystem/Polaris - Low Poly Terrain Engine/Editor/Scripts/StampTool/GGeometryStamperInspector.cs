@@ -238,6 +238,7 @@ namespace Pinwheel.Griffin.StampTool
 
                 if (GUILayout.Button(GActionGUI.APPLY))
                 {
+                    GAnalytics.Record(GAnalytics.STAMPER_GEOMETRY);
                     List<GStylizedTerrain> terrains = GUtilities.ExtractTerrainsFromOverlapTest(GCommon.OverlapTest(instance.GroupId, instance.GetQuad()));
                     CreateInitialBackup(terrains);
                     ApplyStamp();

@@ -678,12 +678,12 @@ namespace Pinwheel.Griffin
                     MaterialToRender.SetTexture(MetallicMapPropertyName, MetallicMapOrDefault);
                 }
 
-                //if (MaterialToRender.HasProperty(ColorByHeightPropertyName)||
-                //    MaterialToRender.HasProperty(ColorByNormalPropertyName)||
-                //    MaterialToRender.HasProperty(ColorBlendPropertyName))
-                //{
-                //    UpdateLookupTextures();
-                //}
+                if (MaterialToRender.HasProperty(ColorByHeightPropertyName)||
+                    MaterialToRender.HasProperty(ColorByNormalPropertyName)||
+                    MaterialToRender.HasProperty(ColorBlendPropertyName))
+                {
+                    UpdateLookupTextures();
+                }
                 if (MaterialToRender.HasProperty(ColorByHeightPropertyName))
                 {
                     MaterialToRender.SetTexture(ColorByHeightPropertyName, ColorByHeightMapOrDefault);

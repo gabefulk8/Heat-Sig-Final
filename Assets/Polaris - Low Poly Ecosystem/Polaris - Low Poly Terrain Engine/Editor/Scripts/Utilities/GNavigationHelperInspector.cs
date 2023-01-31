@@ -45,6 +45,7 @@ namespace Pinwheel.Griffin
                 Rect createButtonRect = EditorGUILayout.GetControlRect();
                 if (GUI.Button(createButtonRect, "Create static obstacles"))
                 {
+                    GAnalytics.Record(GAnalytics.NAVIGATION_HELPER);
                     instance.CreateStaticObstacles();
                 }
 

@@ -396,18 +396,21 @@ namespace Pinwheel.Griffin
         [MenuItem("Window/Polaris/Learning Resources/Online Manual")]
         public static void ShowOnlineUserGuide()
         {
+            GAnalytics.Record(GAnalytics.LINK_ONLINE_MANUAL);
             Application.OpenURL(GCommon.ONLINE_MANUAL);
         }
 
         [MenuItem("Window/Polaris/Learning Resources/Youtube Channel")]
         public static void ShowYoutubeChannel()
         {
+            GAnalytics.Record(GAnalytics.LINK_YOUTUBE);
             Application.OpenURL(GCommon.YOUTUBE_CHANNEL);
         }
 
         [MenuItem("Window/Polaris/Learning Resources/Facebook Page")]
         public static void ShowFacebookPage()
         {
+            GAnalytics.Record(GAnalytics.LINK_FACEBOOK);
             Application.OpenURL(GCommon.FACEBOOK_PAGE);
         }
 
@@ -420,48 +423,56 @@ namespace Pinwheel.Griffin
         [MenuItem("Window/Polaris/Explore/Featured Assets/Poseidon")]
         public static void ShowPoseidonLink()
         {
+            GAnalytics.Record(GAnalytics.LINK_EXPLORE_ASSET);
             GAssetExplorer.ShowPoseidonLink();
         }
 
         [MenuItem("Window/Polaris/Explore/Featured Assets/Jupiter")]
         public static void ShowJupiterLink()
         {
+            GAnalytics.Record(GAnalytics.LINK_EXPLORE_ASSET);
             GAssetExplorer.ShowJupiterLink();
         }
 
         [MenuItem("Window/Polaris/Explore/Featured Assets/CSharp Wizard")]
         public static void ShowCSharpWizardLink()
         {
+            GAnalytics.Record(GAnalytics.LINK_EXPLORE_ASSET);
             GAssetExplorer.ShowCSharpWizardLink();
         }
 
         [MenuItem("Window/Polaris/Explore/Featured Assets/Mesh To File")]
         public static void ShowMeshToFileLink()
         {
+            GAnalytics.Record(GAnalytics.LINK_EXPLORE_ASSET);
             GAssetExplorer.ShowMeshToFileLink();
         }
 
         [MenuItem("Window/Polaris/Explore/Collections/Assets From Pinwheel")]
         public static void ShowAssetsFromPinwheel()
         {
+            GAnalytics.Record(GAnalytics.LINK_EXPLORE_ASSET);
             GAssetExplorer.ShowPinwheelAssets();
         }
 
         [MenuItem("Window/Polaris/Explore/Collections/Vegetation Assets")]
         public static void ShowStylizedVegetationLink()
         {
+            GAnalytics.Record(GAnalytics.LINK_EXPLORE_ASSET);
             GAssetExplorer.ShowVegetationLink();
         }
 
         [MenuItem("Window/Polaris/Explore/Collections/Rock - Props Assets")]
         public static void ShowStylizedRockPropsLink()
         {
+            GAnalytics.Record(GAnalytics.LINK_EXPLORE_ASSET);
             GAssetExplorer.ShowRockPropsLink();
         }
 
         [MenuItem("Window/Polaris/Explore/Collections/Character Assets")]
         public static void ShowStylizedCharacterLink()
         {
+            GAnalytics.Record(GAnalytics.LINK_EXPLORE_ASSET);
             GAssetExplorer.ShowCharacterLink();
         }
 

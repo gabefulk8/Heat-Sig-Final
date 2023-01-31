@@ -91,6 +91,7 @@ namespace Pinwheel.Griffin.DataTool
 
                 if (GUILayout.Button("Export"))
                 {
+                    GAnalytics.Record(GAnalytics.EXPORT_RAW);
                     Export();
                 }
             });

@@ -441,6 +441,7 @@ namespace Pinwheel.Griffin
             if (TerrainData != null)
             {
                 TerrainData.Shading.UpdateMaterials();
+                OnShadingDirty();
             }
 
             if (TerrainData != null && TerrainData.Geometry.StorageMode == GGeometry.GStorageMode.GenerateOnEnable)
@@ -715,12 +716,17 @@ namespace Pinwheel.Griffin
 
         private void GenerateChunks(List<GTerrainChunk> chunksToUpdate, int lod)
         {
+            //GDebug.StartStopwatch();
+
             int meshBaseResolution = TerrainData.Geometry.MeshBaseResolution;
             int meshResolution = TerrainData.Geometry.MeshResolution;
 
             InitGeneration(chunksToUpdate, meshResolution);
+            //GDebug.EndStopwatch(); GDebug.LogStopwatchTimeMilis("Init"); GDebug.StartStopwatch();
             CreateBaseSubdivTree(chunksToUpdate, meshBaseResolution, meshResolution, lod);
+            //GDebug.EndStopwatch(); GDebug.LogStopwatchTimeMilis("Base"); GDebug.StartStopwatch();
             SplitBaseTreeForDynamicPolygon(chunksToUpdate, meshBaseResolution, meshResolution, lod);
+            //GDebug.EndStopwatch(); GDebug.LogStopwatchTimeMilis("Split"); GDebug.StartStopwatch();
             if (lod == 0)
             {
                 if (meshBaseResolution != meshResolution)
@@ -732,17 +738,20 @@ namespace Pinwheel.Griffin
             {
                 StitchSeamLOD(chunksToUpdate, meshBaseResolution, meshResolution, lod);
             }
+            //GDebug.EndStopwatch(); GDebug.LogStopwatchTimeMilis("Stitch"); GDebug.StartStopwatch();
             CountLeafNode(chunksToUpdate, meshBaseResolution, meshResolution, lod);
+            //GDebug.EndStopwatch(); GDebug.LogStopwatchTimeMilis("Count"); GDebug.StartStopwatch();
             CreateVertex(chunksToUpdate, meshBaseResolution, meshResolution, lod);
+            //GDebug.EndStopwatch(); GDebug.LogStopwatchTimeMilis("Vertex"); GDebug.StartStopwatch();
             UpdateMesh(chunksToUpdate, lod);
-            if (lod == 0)
-            {
-                BakeCollisionMesh(chunksToUpdate);
-                UpdateCollisionMesh(chunksToUpdate);
-            }
+
+            //GDebug.EndStopwatch(); GDebug.LogStopwatchTimeMilis("Mesh"); GDebug.StartStopwatch();
             CleanUpGeneration(chunksToUpdate);
+            //GDebug.EndStopwatch(); GDebug.LogStopwatchTimeMilis("Clean");
+
 
             TerrainData.Geometry.ClearDirtyRegions();
+            //OnShadingDirty();
         }
 
         private void InitGeneration(List<GTerrainChunk> chunksToUpdate, int meshResolution)
@@ -1004,36 +1013,6 @@ namespace Pinwheel.Griffin
             }
         }
 
-        private void BakeCollisionMesh(List<GTerrainChunk> chunksToUpdate)
-        {
-            NativeArray<int> meshLod0 = new NativeArray<int>(chunksToUpdate.Count, Allocator.TempJob);
-            for (int i = 0; i < chunksToUpdate.Count; ++i)
-            {
-                Mesh m = chunksToUpdate[i].GetMesh(0);
-                if (m != null)
-                {
-                    meshLod0[i] = m.GetInstanceID();
-                }
-            }
-
-            GBakeCollisionMeshJob job = new GBakeCollisionMeshJob();
-            job.instanceIds = meshLod0;
-
-            JobHandle h = job.Schedule(meshLod0.Length, 1);
-            h.Complete();
-
-            meshLod0.Dispose();
-        }
-
-        private void UpdateCollisionMesh(
-            List<GTerrainChunk> chunksToUpdate)
-        {
-            for (int i = 0; i < chunksToUpdate.Count; ++i)
-            {
-                chunksToUpdate[i].UpdateCollisionMesh();
-            }
-        }
-
         private void CleanUpGeneration(List<GTerrainChunk> chunksToUpdate)
         {
             for (int i = 0; i < chunksToUpdate.Count; ++i)
@@ -1092,8 +1071,6 @@ namespace Pinwheel.Griffin
                 }
                 yield return null;
             }
-            BakeCollisionMesh(chunksToUpdate);
-            UpdateCollisionMesh(chunksToUpdate);
             ForceLOD(-1);
         }
 
@@ -1133,7 +1110,7 @@ namespace Pinwheel.Griffin
 
             //left - top - right - bottom
             //if (LeftNeighbor != null && LeftNeighbor.gameObject.activeInHierarchy && LeftNeighbor.TerrainData != null)
-            if (LeftTerrainData != null)
+            if (LeftTerrainData!=null)
             {
                 descriptors[3] = new GTextureNativeDataDescriptor<Color32>(LeftTerrainData.Geometry.HeightMap);
             }

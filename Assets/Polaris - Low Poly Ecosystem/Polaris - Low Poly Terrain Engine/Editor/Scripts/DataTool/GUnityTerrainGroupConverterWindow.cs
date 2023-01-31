@@ -133,6 +133,7 @@ namespace Pinwheel.Griffin.DataTool
 
                 if (GUILayout.Button("Convert"))
                 {
+                    GAnalytics.Record(GAnalytics.CONVERT_FROM_UNITY_TERRAIN);
                     Convert();
                 }
             });

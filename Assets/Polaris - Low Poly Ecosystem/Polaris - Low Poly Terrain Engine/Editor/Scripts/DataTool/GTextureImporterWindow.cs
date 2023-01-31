@@ -147,6 +147,7 @@ namespace Pinwheel.Griffin.DataTool
 
                 if (GUILayout.Button("Import"))
                 {
+                    GAnalytics.Record(GAnalytics.IMPORT_TEXTURES);
                     Import();
                 }
             });

@@ -767,6 +767,7 @@ namespace Pinwheel.Griffin.TextureTool
 
         private void SaveAsset()
         {
+            RecordAnalytics();
             RenderPreviewTexture();
 
             GGeneralParams generalParams = GTextureToolParams.Instance.General;
@@ -871,6 +872,21 @@ namespace Pinwheel.Griffin.TextureTool
             if (t == null || t.TerrainData != data)
                 return;
             RenderPreviewTexture();
+        }
+
+        private void RecordAnalytics()
+        {
+            GTextureGenerationMode mode = GTextureToolParams.Instance.General.Mode;
+            string url =
+                mode == GTextureGenerationMode.HeightMap ? GAnalytics.TEXTURE_CREATOR_HEIGHT_MAP :
+                mode == GTextureGenerationMode.HeightMapFromMesh ? GAnalytics.TEXTURE_CREATOR_HEIGHT_MAP_FROM_MESH :
+                mode == GTextureGenerationMode.NormalMap ? GAnalytics.TEXTURE_CREATOR_NORMAL_MAP :
+                mode == GTextureGenerationMode.SteepnessMap ? GAnalytics.TEXTURE_CREATOR_STEEPNESS_MAP :
+                mode == GTextureGenerationMode.ColorMap ? GAnalytics.TEXTURE_CREATOR_COLOR_MAP :
+                mode == GTextureGenerationMode.NoiseMap ? GAnalytics.TEXTURE_CREATOR_NOISE_MAP :
+                mode == GTextureGenerationMode.BlendMap ? GAnalytics.TEXTURE_CREATOR_BLEND_MAP :
+                mode == GTextureGenerationMode.FoliageDistributionMap ? GAnalytics.TEXTURE_CREATOR_FOLIAGE_DISTRIBUTION_MAP : string.Empty;
+            GAnalytics.Record(url);
         }
     }
 }

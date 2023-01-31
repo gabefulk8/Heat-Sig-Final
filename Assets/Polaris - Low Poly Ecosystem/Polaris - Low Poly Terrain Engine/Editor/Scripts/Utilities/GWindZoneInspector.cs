@@ -28,6 +28,7 @@ namespace Pinwheel.Griffin
             instance = target as GWindZone;
             if (instance.enabled)
             {
+                GAnalytics.Record(GAnalytics.WIND_ZONE, true);
             }
             SceneView.duringSceneGui += DuringSceneGUI;
         }

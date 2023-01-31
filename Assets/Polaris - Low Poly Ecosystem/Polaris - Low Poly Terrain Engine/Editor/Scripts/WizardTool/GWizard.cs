@@ -100,13 +100,6 @@ namespace Pinwheel.Griffin.Wizard
 #endif
                         }
                         data.Shading.CustomMaterial = material;
-
-                        if (material.HasProperty(data.Shading.ColorByHeightPropertyName) ||
-                            material.HasProperty(data.Shading.ColorByNormalPropertyName) ||
-                            material.HasProperty(data.Shading.ColorBlendPropertyName))
-                        {
-                            data.Shading.UpdateLookupTextures();
-                        }
                         data.Shading.UpdateMaterials();
 
                         GStylizedTerrain terrain = g.AddComponent<GStylizedTerrain>();

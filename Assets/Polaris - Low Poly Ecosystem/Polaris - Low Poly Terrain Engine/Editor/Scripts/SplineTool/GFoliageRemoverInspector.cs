@@ -208,6 +208,7 @@ namespace Pinwheel.Griffin.SplineTool
                 GUI.enabled = instance.RemoveTrees || instance.RemoveGrasses;
                 if (GUILayout.Button(btnLabel))
                 {
+                    GAnalytics.Record(GAnalytics.SPLINE_FOLIAGE_REMOVER);
                     List<GStylizedTerrain> terrains = GUtilities.ExtractTerrainsFromOverlapTest(instance.SplineCreator.SweepTest());
                     CreateInitialBackup(terrains);
                     Apply();
