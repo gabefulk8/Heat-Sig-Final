@@ -658,6 +658,7 @@ namespace Pinwheel.Griffin
             if (lod == 0)
             {
                 MeshFilterComponent.sharedMesh = m;
+                MeshColliderComponent.sharedMesh = m;
             }
             else
             {
@@ -666,15 +667,6 @@ namespace Pinwheel.Griffin
             }
 
             SetLastUpdatedTimeNow();
-        }
-
-        internal void UpdateCollisionMesh()
-        {
-            Mesh m = GetMesh(0);
-            if (m != null)
-            {
-                MeshColliderComponent.sharedMesh = m;
-            }
         }
 
         internal NativeArray<bool> GetVertexMarkerFromMeshUV(int lod)

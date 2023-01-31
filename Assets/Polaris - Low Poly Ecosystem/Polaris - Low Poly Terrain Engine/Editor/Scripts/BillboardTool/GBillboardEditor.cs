@@ -692,6 +692,7 @@ namespace Pinwheel.Griffin.BillboardTool
             try
             {
                 saveFolder = folder;
+                GAnalytics.Record(GAnalytics.BILLBOARD_SAVE);
                 EditorUtility.DisplayProgressBar("Saving", "Saving assets...", 1f);
                 GBillboardCreatorArgs args = ConstructArgs();
                 BillboardAsset billboard = GBillboardCreator.CreateBillboardAsset(args);

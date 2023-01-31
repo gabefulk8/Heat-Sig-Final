@@ -657,6 +657,7 @@ namespace Pinwheel.Griffin.PaintTool
             painter.Mode = (GTexturePaintingMode)GEditorCommon.SelectionGrid(args0);
             if (EditorGUI.EndChangeCheck())
             {
+                RecordPaintModeAnalytics();
             }
 
             if (painter.Mode == GTexturePaintingMode.Custom)
@@ -800,6 +801,24 @@ namespace Pinwheel.Griffin.PaintTool
                         GLivePreviewDrawer.DrawTerrainMask(t, cam);
                 }
             });
+        }
+
+        private void RecordPaintModeAnalytics()
+        {
+            GTexturePaintingMode mode = painter.Mode;
+            string url =
+                mode == GTexturePaintingMode.Elevation ? GAnalytics.TPAINTER_ELEVATION :
+                mode == GTexturePaintingMode.HeightSampling ? GAnalytics.TPAINTER_HEIGHT_SAMPLING :
+                mode == GTexturePaintingMode.Terrace ? GAnalytics.TPAINTER_TERRACE :
+                mode == GTexturePaintingMode.Remap ? GAnalytics.TPAINTER_REMAP :
+                mode == GTexturePaintingMode.Noise ? GAnalytics.TPAINTER_NOISE :
+                mode == GTexturePaintingMode.SubDivision ? GAnalytics.TPAINTER_SUBDIV :
+                mode == GTexturePaintingMode.Albedo ? GAnalytics.TPAINTER_ALBEDO :
+                mode == GTexturePaintingMode.Metallic ? GAnalytics.TPAINTER_METALLIC :
+                mode == GTexturePaintingMode.Smoothness ? GAnalytics.TPAINTER_SMOOTHNESS :
+                mode == GTexturePaintingMode.Splat ? GAnalytics.TPAINTER_SPLAT :
+                mode == GTexturePaintingMode.Custom ? GAnalytics.TPAINTER_CUSTOM : string.Empty;
+            GAnalytics.Record(url);
         }
     }
 }

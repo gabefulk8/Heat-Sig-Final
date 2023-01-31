@@ -207,6 +207,7 @@ namespace Pinwheel.Griffin.SplineTool
             {
                 if (GUILayout.Button(GActionGUI.SPAWN))
                 {
+                    GAnalytics.Record(GAnalytics.SPLINE_OBJECT_SPAWNER);
                     Apply();
                 }
             });

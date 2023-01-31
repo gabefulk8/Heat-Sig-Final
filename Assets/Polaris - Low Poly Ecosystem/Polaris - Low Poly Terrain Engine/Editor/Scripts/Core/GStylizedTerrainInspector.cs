@@ -26,6 +26,8 @@ namespace Pinwheel.Griffin
         private void OnEnable()
         {
             terrain = (GStylizedTerrain)target;
+            if (terrain.TerrainData != null)
+                terrain.TerrainData.Shading.UpdateMaterials();
 
             SceneView.duringSceneGui += DuringSceneGUI;
             GLayerInitializer.SetupRaycastLayer();
@@ -600,6 +602,7 @@ namespace Pinwheel.Griffin
                     EditorUtility.SetDirty(GRuntimeSettings.Instance);
                     if (settings.EnableInstancing)
                     {
+                        GAnalytics.Record(GAnalytics.ENABLE_INSTANCING, true);
                     }
                 }
 
@@ -761,6 +764,7 @@ namespace Pinwheel.Griffin
                     data.SetDirty(GTerrainData.DirtyFlags.Foliage);
                     if (settings.EnableInteractiveGrass)
                     {
+                        GAnalytics.Record(GAnalytics.ENABLE_INTERACTIVE_GRASS, true);
                     }
                 }
 
@@ -1104,6 +1108,7 @@ namespace Pinwheel.Griffin
                  {
                      if (terrain.TopNeighbor != null || terrain.BottomNeighbor != null || terrain.LeftNeighbor != null || terrain.RightNeighbor != null)
                      {
+                         GAnalytics.Record(GAnalytics.MULTI_TERRAIN, true);
                      }
                  }
              }, menu);

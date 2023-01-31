@@ -572,6 +572,7 @@ namespace Pinwheel.Griffin.PaintTool
             painter.Mode = (GFoliagePaintingMode)GEditorCommon.SelectionGrid(args0);
             if (EditorGUI.EndChangeCheck())
             {
+                RecordPaintModeAnalytics();
             }
 
             if (painter.Mode == GFoliagePaintingMode.Custom)
@@ -640,6 +641,18 @@ namespace Pinwheel.Griffin.PaintTool
             EditorGUI.indentLevel = 0;
             GUI.Label(labelRect, label, labelStyle);
             EditorGUI.indentLevel = indent;
+        }
+
+        private void RecordPaintModeAnalytics()
+        {
+            GFoliagePaintingMode mode = painter.Mode;
+            string url =
+                mode == GFoliagePaintingMode.PaintTree ? GAnalytics.FPAINTER_PAINT_TREE :
+                mode == GFoliagePaintingMode.ScaleTree ? GAnalytics.FPAINTER_SCALE_TREE :
+                mode == GFoliagePaintingMode.PaintGrass ? GAnalytics.FPAINTER_PAINT_GRASS :
+                mode == GFoliagePaintingMode.ScaleGrass ? GAnalytics.FPAINTER_SCALE_GRASS :
+                mode == GFoliagePaintingMode.Custom ? GAnalytics.FPAINTER_CUSTOM : string.Empty;
+            GAnalytics.Record(url);
         }
 
         private void OnBeginRender(Camera cam)

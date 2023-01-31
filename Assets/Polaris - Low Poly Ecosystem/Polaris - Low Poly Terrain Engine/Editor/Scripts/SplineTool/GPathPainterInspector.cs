@@ -165,6 +165,7 @@ namespace Pinwheel.Griffin.SplineTool
             {
                 if (GUILayout.Button(GActionGUI.APPLY_BTN))
                 {
+                    GAnalytics.Record(GAnalytics.SPLINE_PATH_PAINTER);
                     List<GStylizedTerrain> terrains = GUtilities.ExtractTerrainsFromOverlapTest(instance.SplineCreator.SweepTest());
                     CreateInitialBackup(terrains);
                     ApplyPath();

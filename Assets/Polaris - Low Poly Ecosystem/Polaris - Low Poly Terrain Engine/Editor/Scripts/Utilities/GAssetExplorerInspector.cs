@@ -152,24 +152,28 @@ namespace Pinwheel.Griffin
                 r = EditorGUILayout.GetControlRect();
                 if (GUI.Button(r, "Other Assets From Pinwheel"))
                 {
+                    GAnalytics.Record(GAnalytics.ASSET_EXPLORER_LINK_CLICK);
                     GAssetExplorer.ShowPinwheelAssets();
                 }
 
                 r = EditorGUILayout.GetControlRect();
                 if (GUI.Button(r, "Vegetation"))
                 {
+                    GAnalytics.Record(GAnalytics.ASSET_EXPLORER_LINK_CLICK);
                     GAssetExplorer.ShowVegetationLink();
                 }
 
                 r = EditorGUILayout.GetControlRect();
                 if (GUI.Button(r, "Rock & Props"))
                 {
+                    GAnalytics.Record(GAnalytics.ASSET_EXPLORER_LINK_CLICK);
                     GAssetExplorer.ShowRockPropsLink();
                 }
 
                 r = EditorGUILayout.GetControlRect();
                 if (GUI.Button(r, "Character"))
                 {
+                    GAnalytics.Record(GAnalytics.ASSET_EXPLORER_LINK_CLICK);
                     GAssetExplorer.ShowCharacterLink();
                 }
             });

@@ -248,6 +248,7 @@ namespace Pinwheel.Griffin.GroupTool
                     instance.GeometryOverride = g;
                     if (!instance.DeferredUpdate)
                     {
+                        GAnalytics.Record(GAnalytics.GROUP_OVERRIDE_GEOMETRY);
                         EditorUtility.DisplayProgressBar("Overriding", "Re-generating terrains geometry", 1);
                         instance.OverrideGeometry();
                         EditorUtility.ClearProgressBar();
@@ -441,6 +442,7 @@ namespace Pinwheel.Griffin.GroupTool
                     instance.ShadingOverride = s;
                     if (!instance.DeferredUpdate)
                     {
+                        GAnalytics.Record(GAnalytics.GROUP_OVERRIDE_SHADING);
                         instance.OverrideShading();
                     }
                 }
@@ -565,6 +567,7 @@ namespace Pinwheel.Griffin.GroupTool
                     instance.RenderingOverride = r;
                     if (!instance.DeferredUpdate)
                     {
+                        GAnalytics.Record(GAnalytics.GROUP_OVERRIDE_RENDERING);
                         instance.OverrideRendering();
                     }
                 }
@@ -774,6 +777,7 @@ namespace Pinwheel.Griffin.GroupTool
                     instance.FoliageOverride = f;
                     if (!instance.DeferredUpdate)
                     {
+                        GAnalytics.Record(GAnalytics.GROUP_OVERRIDE_FOLIAGE);
                         instance.OverrideFoliage();
                     }
                 }
@@ -837,6 +841,7 @@ namespace Pinwheel.Griffin.GroupTool
                     instance.MaskOverride = m;
                     if (!instance.DeferredUpdate)
                     {
+                        GAnalytics.Record(GAnalytics.GROUP_OVERRIDE_FOLIAGE);
                         instance.OverrideMask();
                     }
                 }
@@ -981,6 +986,7 @@ namespace Pinwheel.Griffin.GroupTool
                     g.OverrideLength;
                 if (GUILayout.Button("Re-Arrange"))
                 {
+                    GAnalytics.Record(GAnalytics.GROUP_REARRANGE);
                     instance.ReArrange();
                     GUtilities.MarkCurrentSceneDirty();
                 }
@@ -998,6 +1004,7 @@ namespace Pinwheel.Griffin.GroupTool
             {
                 if (GUILayout.Button("Match"))
                 {
+                    GAnalytics.Record(GAnalytics.GROUP_MATCH_EDGE);
                     GStylizedTerrain.MatchEdges(instance.GroupId);
                     GUtilities.MarkCurrentSceneDirty();
                 }

@@ -136,6 +136,7 @@ namespace Pinwheel.Griffin.BackupTool
                 Rect r = EditorGUILayout.GetControlRect();
                 if (GUI.Button(r, "Create"))
                 {
+                    GAnalytics.Record(GAnalytics.BACKUP_CREATE);
                     EditorUtility.DisplayProgressBar("Backing Up", "Creating backup files...", 1);
                     GUndoCompatibleBuffer.Instance.RecordUndo();
                     GBackup.Create(BackupName, GroupID);
@@ -239,6 +240,7 @@ namespace Pinwheel.Griffin.BackupTool
                 "It's better to save your work before proceeding!",
                 "OK", "Cancel"))
             {
+                GAnalytics.Record(GAnalytics.BACKUP_RESTORE);
                 RestoreBackup(backupName);
             }
         }

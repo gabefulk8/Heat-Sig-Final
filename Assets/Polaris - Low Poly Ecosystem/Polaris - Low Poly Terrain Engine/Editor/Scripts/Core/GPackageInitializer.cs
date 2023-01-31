@@ -5,7 +5,6 @@ using UnityEditor.Callbacks;
 using System;
 using UnityEditor.PackageManager;
 using UnityEditor.PackageManager.Requests;
-using System.Reflection;
 
 namespace Pinwheel.Griffin
 {
@@ -248,7 +247,9 @@ namespace Pinwheel.Griffin
                 symbols = ListElementsToString(symbolList, ";");
                 PlayerSettings.SetScriptingDefineSymbolsForGroup(buildGroup, symbols);
             }
-
+#if GRIFFIN
+            RecordAnalytics();
+#endif
             if (Completed != null)
             {
                 Completed.Invoke();
@@ -275,7 +276,7 @@ namespace Pinwheel.Griffin
         {
             List<System.Type> loadedTypes = new List<System.Type>();
             List<string> typeName = new List<string>();
-            foreach (Assembly assembly in System.AppDomain.CurrentDomain.GetAssemblies())
+            foreach (var assembly in System.AppDomain.CurrentDomain.GetAssemblies())
             {
                 foreach (var t in assembly.GetTypes())
                 {
@@ -299,5 +300,87 @@ namespace Pinwheel.Griffin
             }
             return s.ToString();
         }
+
+#if GRIFFIN
+        public static void RecordAnalytics()
+        {
+#if UNITY_EDITOR_WIN
+            GAnalytics.Record(GAnalytics.OS_WINDOWS, true);
+#elif UNITY_EDITOR_OSX
+            GAnalytics.Record(GAnalytics.OS_MAC, true);
+#elif UNITY_EDITOR_LINUX
+            GAnalytics.Record(GAnalytics.OS_LINUX, true);
+#endif
+
+            BuildTarget buildTarget = EditorUserBuildSettings.activeBuildTarget;
+            BuildTargetGroup buildGroup = BuildPipeline.GetBuildTargetGroup(buildTarget);
+            if (buildGroup == BuildTargetGroup.Standalone)
+            {
+                GAnalytics.Record(GAnalytics.PLATFORM_PC, true);
+            }
+            else if (buildGroup == BuildTargetGroup.iOS || buildGroup == BuildTargetGroup.Android)
+            {
+                GAnalytics.Record(GAnalytics.PLATFORM_MOBILE, true);
+            }
+            else if (buildGroup == BuildTargetGroup.WebGL)
+            {
+                GAnalytics.Record(GAnalytics.PLATFORM_WEB, true);
+            }
+            else if (buildGroup == BuildTargetGroup.PS4 || buildGroup == BuildTargetGroup.XboxOne || buildGroup == BuildTargetGroup.Switch)
+            {
+                GAnalytics.Record(GAnalytics.PLATFORM_CONSOLE, true);
+            }
+            else
+            {
+                GAnalytics.Record(GAnalytics.PLATFORM_OTHER, true);
+            }
+
+#if UNITY_2019_1 || UNITY_2019_2
+            if (PlayerSettings.virtualRealitySupported)
+            {
+                GAnalytics.Record(GAnalytics.XR_PROJECT, true);
+            }
+#elif UNITY_2019_3_OR_NEWER
+            if (isXrManagementInstalled)
+            {
+                GAnalytics.Record(GAnalytics.XR_PROJECT, true);
+            }
+#endif
+
+            if (PlayerSettings.colorSpace == ColorSpace.Gamma)
+            {
+                GAnalytics.Record(GAnalytics.COLOR_SPACE_GAMMA, true);
+            }
+            else if (PlayerSettings.colorSpace == ColorSpace.Linear)
+            {
+                GAnalytics.Record(GAnalytics.COLOR_SPACE_LINEAR, true);
+            }
+
+            if (isASEInstalled)
+            {
+                GAnalytics.Record(GAnalytics.INTEGRATION_AMPLIFY_SHADER_EDITOR, true);
+            }
+            if (isPoseidonInstalled)
+            {
+                GAnalytics.Record(GAnalytics.INTEGRATION_POSEIDON, true);
+            }
+            if (isCSharpWizardInstalled)
+            {
+                GAnalytics.Record(GAnalytics.INTEGRATION_CSHARP_WIZARD, true);
+            }
+            if (isMeshToFileInstalled)
+            {
+                GAnalytics.Record(GAnalytics.INTEGRATION_MESH_TO_FILE, true);
+            }
+            if (isVegetationStudioProExtensionInstalled)
+            {
+                GAnalytics.Record(GAnalytics.INTEGRATION_VEGETATION_STUDIO, true);
+            }
+            if (isMicroSplatIntegrationInstalled)
+            {
+                GAnalytics.Record(GAnalytics.INTEGRATION_MICRO_SPLAT, true);
+            }
+        }
+#endif
     }
 }

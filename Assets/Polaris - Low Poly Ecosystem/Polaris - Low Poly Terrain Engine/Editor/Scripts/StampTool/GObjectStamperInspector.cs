@@ -490,6 +490,7 @@ namespace Pinwheel.Griffin.StampTool
 
                 if (GUILayout.Button(GActionGUI.APPLY))
                 {
+                    GAnalytics.Record(GAnalytics.STAMPER_OBJECT);
                     ApplyStamp();
                     EditorGUIUtility.ExitGUI();
                 }

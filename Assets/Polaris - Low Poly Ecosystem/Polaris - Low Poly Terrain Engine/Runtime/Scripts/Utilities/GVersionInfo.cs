@@ -18,7 +18,7 @@ namespace Pinwheel.Griffin
         {
             get
             {
-                return "2021.1.13";
+                return "2021.1.12";
             }
         }
 

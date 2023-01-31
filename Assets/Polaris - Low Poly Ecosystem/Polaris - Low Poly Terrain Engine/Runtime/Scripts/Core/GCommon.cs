@@ -72,7 +72,38 @@ namespace Pinwheel.Griffin
         private static void Init()
         {
             mainThreadId = System.Threading.Thread.CurrentThread.ManagedThreadId;
+#if UNITY_EDITOR
+            EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
+#endif
         }
+
+#if UNITY_EDITOR
+        private static void OnPlayModeStateChanged(PlayModeStateChange obj)
+        {
+            RecordRenderPipelineAnalytics();
+        }
+
+        private static void RecordRenderPipelineAnalytics()
+        {
+            string renderPipeline = Shader.globalRenderPipeline;
+            if (renderPipeline.Equals(string.Empty))
+            {
+                GAnalytics.Record(GAnalytics.RENDER_PIPELINE_BUILTIN, true);
+            }
+            else if (renderPipeline.Equals("LightweightPipeline"))
+            {
+                GAnalytics.Record(GAnalytics.RENDER_PIPELINE_LIGHTWEIGHT, true);
+            }
+            else if (renderPipeline.Equals("UniversalPipeline,LightweightPipeline"))
+            {
+                GAnalytics.Record(GAnalytics.RENDER_PIPELINE_UNIVERSAL, true);
+            }
+            else
+            {
+                GAnalytics.Record(GAnalytics.RENDER_PIPELINE_OTHER, true);
+            }
+        }
+#endif
 
         public static bool IsMainThread
         {

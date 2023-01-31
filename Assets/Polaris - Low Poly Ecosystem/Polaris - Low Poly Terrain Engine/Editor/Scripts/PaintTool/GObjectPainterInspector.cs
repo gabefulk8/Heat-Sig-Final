@@ -570,6 +570,7 @@ namespace Pinwheel.Griffin.PaintTool
             painter.Mode = (GObjectPaintingMode)GEditorCommon.SelectionGrid(args0);
             if (EditorGUI.EndChangeCheck())
             {
+                RecordPaintModeAnalytics();
             }
 
             if (painter.Mode == GObjectPaintingMode.Custom)
@@ -638,6 +639,16 @@ namespace Pinwheel.Griffin.PaintTool
             EditorGUI.indentLevel = 0;
             GUI.Label(labelRect, label, labelStyle);
             EditorGUI.indentLevel = indent;
+        }
+
+        private void RecordPaintModeAnalytics()
+        {
+            GObjectPaintingMode mode = painter.Mode;
+            string url =
+                mode == GObjectPaintingMode.Spawn ? GAnalytics.OPAINTER_SPAWN :
+                mode == GObjectPaintingMode.Scale ? GAnalytics.OPAINTER_SCALE :
+                mode == GObjectPaintingMode.Custom ? GAnalytics.OPAINTER_CUSTOM : string.Empty;
+            GAnalytics.Record(url);
         }
 
         private void OnBeginRender(Camera cam)
