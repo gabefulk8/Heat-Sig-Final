@@ -9,6 +9,7 @@ public class DroneSwap : MonoBehaviour
     public GameObject droneCam;     //set this in editor
     public CharacterController charCont;    //put this script on the player and it should find the character controller
     public int camState;  // 0 is main cam. 1 is drone cam
+    public GameObject mouseScript;
 
     public Material[] materials;    //different materials for the monster. 0 is default, 1 is thermal
     public Renderer rend;       //renderer on the monster
@@ -50,6 +51,8 @@ public class DroneSwap : MonoBehaviour
         charCont.enabled = true;
 
         rend.sharedMaterial = materials[0]; //default monster material
+
+        mouseScript.SetActive(true);
     }
 
     void ToDrone()
@@ -63,5 +66,6 @@ public class DroneSwap : MonoBehaviour
         charCont.enabled = false;
 
         rend.sharedMaterial = materials[1];
+        mouseScript.SetActive(false);
     }
 }
