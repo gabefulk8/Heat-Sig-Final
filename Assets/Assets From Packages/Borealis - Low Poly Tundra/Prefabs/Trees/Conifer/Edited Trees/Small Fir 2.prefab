@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1876711098275886217}
   - component: {fileID: 3054716720209020354}
   - component: {fileID: 7249975940458497682}
+  - component: {fileID: -8597850570692855057}
   m_Layer: 0
   m_Name: Small Fir 2
   m_TagString: Untagged
@@ -106,3 +107,17 @@ MonoBehaviour:
   destroyCombinedChildren: 1
   folderPath: MyPrefabs/Combined Meshes
   meshFiltersToSkip: []
+--- !u!136 &-8597850570692855057
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8270587947278137255}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.6122267
+  m_Height: 15.710463
+  m_Direction: 1
+  m_Center: {x: -0.01649642, y: 3.0552292, z: 0.02015686}

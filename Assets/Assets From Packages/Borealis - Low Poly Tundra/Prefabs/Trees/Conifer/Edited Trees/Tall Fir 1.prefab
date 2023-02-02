@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1272312949072072509}
   - component: {fileID: 6607704771703031494}
   - component: {fileID: 4770607631906868929}
+  - component: {fileID: -359492416298306344}
   m_Layer: 0
   m_Name: Tall Fir 1
   m_TagString: Untagged
@@ -106,3 +107,17 @@ MonoBehaviour:
   destroyCombinedChildren: 1
   folderPath: MyPrefabs/Combined Meshes
   meshFiltersToSkip: []
+--- !u!136 &-359492416298306344
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8535735921513476676}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.7993469
+  m_Height: 24.404238
+  m_Direction: 1
+  m_Center: {x: -0.010665894, y: 7.4011126, z: 0.0128479}
