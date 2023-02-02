@@ -10,18 +10,23 @@ public class DroneSwap : MonoBehaviour
     public CharacterController charCont;    //put this script on the player and it should find the character controller
     public int camState;  // 0 is main cam. 1 is drone cam
 
+    public Material[] materials;    //different materials for the monster. 0 is default, 1 is thermal
+    public Renderer rend;       //renderer on the monster
+
+
     private InputAction playerControls;
-    
+
 
     void Start()
     {
         charCont = this.GetComponent<CharacterController>();
         camState = 0;
+
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && camState == 0 ) //go to drone cam
+        if (Input.GetKeyDown(KeyCode.Q) && camState == 0) //go to drone cam
         {
             ToDrone();
             camState = 1;
@@ -40,7 +45,11 @@ public class DroneSwap : MonoBehaviour
         droneCam.SetActive(false);
         mainCam.SetActive(true);
 
+        RenderSettings.fogColor = Color.black;
+
         charCont.enabled = true;
+
+        rend.sharedMaterial = materials[0]; //default monster material
     }
 
     void ToDrone()
@@ -49,10 +58,10 @@ public class DroneSwap : MonoBehaviour
         mainCam.SetActive(false);
         droneCam.SetActive(true);
 
+        RenderSettings.fogColor = Color.white;
+
         charCont.enabled = false;
+
+        rend.sharedMaterial = materials[1];
     }
-
-
-    
-
 }
