@@ -58,7 +58,7 @@ namespace Pathfinding
 				search = true;
 				switchTime = float.PositiveInfinity;
 			}
-			if (Vector3.Distance(transform.position, target.position) < 15)
+			if (Vector3.Distance(transform.position, target.position) < 30)
 			{
 				agent.destination = target.position;
 
