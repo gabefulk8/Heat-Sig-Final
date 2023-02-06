@@ -1,8 +1,3 @@
-V2021.1.13
-FIXES
-- Minor fixes for web request issues.
-
-===
 V2021.1.12
 FIXES
 - Fix "Loaded object state has been modifiied during domain backup" error on entering play mode.
