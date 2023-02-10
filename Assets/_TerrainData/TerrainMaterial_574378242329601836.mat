@@ -25,17 +25,29 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorBlend:
+<<<<<<< HEAD
         m_Texture: {fileID: -7337119664953756844, guid: 4563550f89c0a084fac96bce102b22bc,
+=======
+        m_Texture: {fileID: 7848645291982784570, guid: 4563550f89c0a084fac96bce102b22bc,
+>>>>>>> parent of f222de23 (fixed terrain error in lake)
           type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorByHeight:
+<<<<<<< HEAD
         m_Texture: {fileID: -8470116096315205668, guid: 4563550f89c0a084fac96bce102b22bc,
+=======
+        m_Texture: {fileID: -1793213249411456630, guid: 4563550f89c0a084fac96bce102b22bc,
+>>>>>>> parent of f222de23 (fixed terrain error in lake)
           type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorByNormal:
+<<<<<<< HEAD
         m_Texture: {fileID: 6546877240745926288, guid: 4563550f89c0a084fac96bce102b22bc,
+=======
+        m_Texture: {fileID: -2227992906250988461, guid: 4563550f89c0a084fac96bce102b22bc,
+>>>>>>> parent of f222de23 (fixed terrain error in lake)
           type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
