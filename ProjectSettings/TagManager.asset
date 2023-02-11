@@ -7,7 +7,6 @@ TagManager:
   - Flesh
   - Water
   - Zombie
-  - Wood
   layers:
   - Default
   - TransparentFX
@@ -37,7 +36,7 @@ TagManager:
   - 
   - 
   - 
-  - IGNORE FLASHLIGHT
+  - 
   - 
   - POLARIS RAYCAST
   - POLARIS SPLINE
