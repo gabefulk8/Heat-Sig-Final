@@ -25,17 +25,17 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorBlend:
-        m_Texture: {fileID: 4334486864320628476, guid: 8f294c06302ab4e48b3b49ad81dd7a7e,
+        m_Texture: {fileID: 588653155598603446, guid: 8f294c06302ab4e48b3b49ad81dd7a7e,
           type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorByHeight:
-        m_Texture: {fileID: 881030386497044732, guid: 8f294c06302ab4e48b3b49ad81dd7a7e,
+        m_Texture: {fileID: -1802565121097850991, guid: 8f294c06302ab4e48b3b49ad81dd7a7e,
           type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorByNormal:
-        m_Texture: {fileID: 2954907360238150446, guid: 8f294c06302ab4e48b3b49ad81dd7a7e,
+        m_Texture: {fileID: 2834651244491157510, guid: 8f294c06302ab4e48b3b49ad81dd7a7e,
           type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}

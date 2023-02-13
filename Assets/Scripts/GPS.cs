@@ -78,7 +78,7 @@ public class GPS : MonoBehaviour
 
 
         //ligma balls
-        arrow.rectTransform.eulerAngles = new Vector3(0, 0, -(audioSlider.value * 360));
+        //arrow.rectTransform.eulerAngles = new Vector3(0, 0, -(audioSlider.value * 360));
     }
 
     void Menus()
