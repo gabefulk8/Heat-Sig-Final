@@ -8,6 +8,7 @@ TagManager:
   - Water
   - Zombie
   - Wood
+  - Tree
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - Zombie
   - Interact
@@ -31,13 +32,13 @@ TagManager:
   - Threat
   - 
   - 
+  - Tree
   - 
   - 
   - 
   - 
   - 
-  - 
-  - ITEMS NO LIGHT
+  - ITEM NO SNOW
   - 
   - POLARIS RAYCAST
   - POLARIS SPLINE

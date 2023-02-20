@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6607704771703031494}
   - component: {fileID: 4770607631906868929}
   - component: {fileID: -359492416298306344}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: Tall Fir 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
