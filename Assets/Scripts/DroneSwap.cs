@@ -47,6 +47,7 @@ public class DroneSwap : MonoBehaviour
         mainCam.SetActive(true);
 
         RenderSettings.fogColor = Color.black;
+        RenderSettings.ambientLight = new Color(0.227451f, 0.227451f, 0.227451f);
 
         charCont.enabled = true;
 
@@ -62,6 +63,7 @@ public class DroneSwap : MonoBehaviour
         droneCam.SetActive(true);
 
         RenderSettings.fogColor = Color.white;
+        RenderSettings.ambientLight = new Color(0.8f, 0.8f, 0.8f);
 
         charCont.enabled = false;
 
