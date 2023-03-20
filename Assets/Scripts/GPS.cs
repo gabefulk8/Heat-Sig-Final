@@ -45,6 +45,13 @@ public class GPS : MonoBehaviour
     private int numberoflogs;
     [SerializeField] Image arrow;
 
+    //LocationBooleans
+    [SerializeField] public bool QuarryScanned;
+    [SerializeField] public bool RangerScanned;
+    [SerializeField] public bool CabinScanned;
+    [SerializeField] public bool BoatScanned;
+    [SerializeField] public bool CampScanned;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -175,31 +182,31 @@ public class GPS : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             locations[0].text = "<s>Location 1: 100, 200, 300<s>";
+            QuarryScanned = true;
             playAudio(checkmark);
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             locations[1].text = "<s>Location 2: 100, 200, 300<s>";
+            RangerScanned = true;
             playAudio(checkmark);
         }
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
             locations[2].text = "<s>Location 3: 100, 200, 300<s>";
+            CabinScanned = true;
             playAudio(checkmark);
         }
         if (Input.GetKeyDown(KeyCode.Alpha7))
         {
             locations[3].text = "<s>Location 4: 100, 200, 300<s>";
+            BoatScanned = true;
             playAudio(checkmark);
         }
         if (Input.GetKeyDown(KeyCode.Alpha8))
         {
             locations[4].text = "<s>Location 5: 100, 200, 300<s>";
-            playAudio(checkmark);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha9))
-        {
-            locations[5].text = "<s>Location 6: 100, 200, 300<s>";
+            CampScanned = true;
             playAudio(checkmark);
         }
     }
