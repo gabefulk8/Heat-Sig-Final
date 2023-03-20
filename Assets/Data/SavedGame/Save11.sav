@@ -1,0 +1,88 @@
+{
+  "scene": "World",
+  "levelName": "World",
+  "levelNameKey": null,
+  "dateTime": "2023-03-05 22:30:08",
+  "playerData": {
+    "playerPosition": {
+      "x": -801.8431,
+      "y": 17.9111443,
+      "z": 107.551376,
+      "normalized": {
+        "x": -0.9908813,
+        "y": 0.02213378,
+        "z": 0.132907122,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.0
+      },
+      "magnitude": 809.2221,
+      "sqrMagnitude": 654840.438
+    },
+    "cameraRotation": {
+      "x": -91.20025,
+      "y": -14.8000107,
+      "normalized": {
+        "x": -0.9870871,
+        "y": -0.16018486,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.00000012
+      },
+      "magnitude": 92.39332,
+      "sqrMagnitude": 8536.525
+    },
+    "characterState": 0,
+    "playerHealth": 100.0
+  },
+  "itemSwitcherData": {
+    "switcherActiveItem": -1,
+    "switcherWeaponItem": -1,
+    "switcher_item_flashlight": {
+      "FlashlightItem": {
+        "batteryPercentage": 100.0
+      }
+    },
+    "switcher_item_lantern": {
+      "LanternItem": {
+        "lightPercentage": 100.0,
+        "lightIntensity": 1.0,
+        "flameAlpha": 0.0
+      }
+    },
+    "switcher_item_candle": {
+      "CandleItem": {
+        "candleScale": 0.00113
+      }
+    },
+    "switcher_item_pistol": {
+      "WeaponController": {
+        "bulletsInMag": 7,
+        "uiShown": false
+      }
+    },
+    "switcher_item_shotgun": {
+      "WeaponController": {
+        "bulletsInMag": 7,
+        "uiShown": false
+      }
+    }
+  },
+  "inventoryData": {
+    "inv_slots_count": 10,
+    "slotsData": {
+      "inv_slot_0": "null",
+      "inv_slot_1": "null",
+      "inv_slot_2": "null",
+      "inv_slot_3": "null",
+      "inv_slot_4": "null",
+      "inv_slot_5": "null",
+      "inv_slot_6": "null",
+      "inv_slot_7": "null",
+      "inv_slot_8": "null",
+      "inv_slot_9": "null"
+    }
+  },
+  "objectivesData": {
+    "activeObjectives": {},
+    "touchedObjectives": {}
+  }
+}
