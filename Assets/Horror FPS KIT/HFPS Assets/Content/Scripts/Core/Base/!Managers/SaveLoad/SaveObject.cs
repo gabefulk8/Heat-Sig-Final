@@ -41,12 +41,7 @@ namespace HFPS.Systems
             {
                 return new Dictionary<string, object>
                 {
-                    {"position", transform.position },
-                    {"QuarryScanned", GetComponent<GPS>().QuarryScanned },
-                    {"RangerScanned", GetComponent<GPS>().RangerScanned },
-                    {"CabinScanned", GetComponent<GPS>().CabinScanned },
-                    {"BoatScanned", GetComponent<GPS>().BoatScanned },
-                    {"CampScanned", GetComponent<GPS>().CampScanned }
+                    {"position", transform.position }
                 };
             }
             else if (saveType == SaveType.Rotation)
@@ -93,11 +88,6 @@ namespace HFPS.Systems
                 else if (saveType == SaveType.Position)
                 {
                     transform.position = token["position"].ToObject<Vector3>();
-                    GetComponent<GPS>().QuarryScanned = token["QuarryScanned"].ToObject<bool>();
-                    GetComponent<GPS>().RangerScanned = token["RangerScanned"].ToObject<bool>();
-                    GetComponent<GPS>().CabinScanned = token["CabinScanned"].ToObject<bool>();
-                    GetComponent<GPS>().BoatScanned = token["BoatScanned"].ToObject<bool>();
-                    GetComponent<GPS>().CampScanned = token["CampScanned"].ToObject<bool>();
                 }
                 else if (saveType == SaveType.Rotation)
                 {

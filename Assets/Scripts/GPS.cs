@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using HFPS.Systems;
+using Newtonsoft.Json.Linq;
 
-public class GPS : MonoBehaviour
+public class GPS : MonoBehaviour, ISaveable
 {
     [SerializeField] GameObject player;
     [SerializeField] GameObject[] items;
@@ -46,11 +48,11 @@ public class GPS : MonoBehaviour
     [SerializeField] Image arrow;
 
     //LocationBooleans
-    [SerializeField] public bool QuarryScanned;
-    [SerializeField] public bool RangerScanned;
-    [SerializeField] public bool CabinScanned;
-    [SerializeField] public bool BoatScanned;
-    [SerializeField] public bool CampScanned;
+    [SerializeField] public bool QuarryScanned = false;
+    [SerializeField] public bool RangerScanned = false;
+    [SerializeField] public bool CabinScanned = false;
+    [SerializeField] public bool BoatScanned = false;
+    [SerializeField] public bool CampScanned = false;
 
     // Start is called before the first frame update
     void Start()
@@ -344,5 +346,26 @@ public class GPS : MonoBehaviour
             buttonAnimators[3].SetTrigger("ButtonInput");
         }
     }
-  
+
+    public Dictionary<string, object> OnSave()
+    {
+        return new Dictionary<string, object>
+        {
+            { "QuarryScanned", GetComponent<GPS>().QuarryScanned },
+            { "RangerScanned", GetComponent<GPS>().RangerScanned },
+            { "CabinScanned", GetComponent<GPS>().CabinScanned },
+            { "BoatScanned", GetComponent<GPS>().BoatScanned },
+            { "CampScanned", GetComponent<GPS>().CampScanned }
+        };
+        
+    }
+
+    public void OnLoad(JToken token)
+    {
+        GetComponent<GPS>().QuarryScanned = token["QuarryScanned"].ToObject<bool>();
+        GetComponent<GPS>().RangerScanned = token["RangerScanned"].ToObject<bool>();
+        GetComponent<GPS>().CabinScanned = token["CabinScanned"].ToObject<bool>();
+        GetComponent<GPS>().BoatScanned = token["BoatScanned"].ToObject<bool>();
+        GetComponent<GPS>().CampScanned = token["CampScanned"].ToObject<bool>();
+    }
 }
