@@ -25,6 +25,7 @@ public class AnimManager : MonoBehaviour
     public bool shipPlayed = false;
     public bool campPlayed = false;
 
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Y) && minePlayed == false) //Mine Animation Trigger
@@ -70,6 +71,7 @@ public class AnimManager : MonoBehaviour
 
     void playMineAnim() //Play Mine Animation
     {
+        GetComponent<DroneSwap>().ThermalsON();
         tempCam = mineCam;
         mineAnimator.SetTrigger("PlayMineAnim");
         minePlayed = true;
@@ -81,6 +83,7 @@ public class AnimManager : MonoBehaviour
 
     void playCabinAnim() //Play Cabin Animation
     {
+        GetComponent<DroneSwap>().ThermalsON();
         tempCam = cabinCam;
         cabinAnimator.SetTrigger("PlayCabinAnim");
         cabinPlayed = true;
@@ -92,6 +95,7 @@ public class AnimManager : MonoBehaviour
 
     void playRangerAnim() //Play Ranger Animation
     {
+        GetComponent<DroneSwap>().ThermalsON();
         tempCam = rangerCam;
         rangerAnimator.SetTrigger("PlayRangerAnim");
         rangerPlayed = true;
@@ -103,6 +107,7 @@ public class AnimManager : MonoBehaviour
 
     void playShipAnim() //Play Ship Animation
     {
+        GetComponent<DroneSwap>().ThermalsON();
         tempCam = shipCam;
         shipAnimator.SetTrigger("PlayShipAnim");
         shipPlayed = true;
@@ -114,6 +119,7 @@ public class AnimManager : MonoBehaviour
 
     void playCampAnim() //Play Camp Animation
     {
+        GetComponent<DroneSwap>().ThermalsON();
         tempCam = campCam;
         campAnimator.SetTrigger("PlayCampAnim");
         campPlayed = true;
@@ -128,6 +134,9 @@ public class AnimManager : MonoBehaviour
         tempCam.SetActive(false);
         RenderSettings.ambientLight = new Color(0.227451f, 0.227451f, 0.227451f);
         RenderSettings.fogColor = Color.black;
+
+        GetComponent<DroneSwap>().ThermalsOFF();
+
         mainCam.SetActive(true);
     }
 }

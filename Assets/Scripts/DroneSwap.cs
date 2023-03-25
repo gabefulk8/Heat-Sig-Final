@@ -13,7 +13,12 @@ public class DroneSwap : MonoBehaviour
 
     public Material[] materials;    //different materials for the monster. 0 is default, 1 is thermal
     public Renderer rend;       //renderer on the monster
-
+    public Renderer quarryFlareRenderer;
+    public Renderer cabinLampRenderer;
+    public Renderer towerLampRenderer;
+    public Renderer boatLampRenderer;
+    public Renderer campLampRenderer;
+    public Material[] guidanceMats; // 0 is thermal, 1 flare, 2 lamp
 
     private InputAction playerControls;
 
@@ -51,7 +56,7 @@ public class DroneSwap : MonoBehaviour
 
         charCont.enabled = true;
 
-        rend.sharedMaterial = materials[0]; //default monster material
+        ThermalsOFF();
 
         mouseScript.SetActive(true);
     }
@@ -67,7 +72,28 @@ public class DroneSwap : MonoBehaviour
 
         charCont.enabled = false;
 
-        rend.sharedMaterial = materials[1];
+        ThermalsON();
+        
         mouseScript.SetActive(false);
+    }
+
+    public void ThermalsON()
+    {
+        rend.sharedMaterial = materials[1];
+        quarryFlareRenderer.sharedMaterial = guidanceMats[0];
+        campLampRenderer.sharedMaterial = guidanceMats[0];
+        towerLampRenderer.sharedMaterial = guidanceMats[0];
+        boatLampRenderer.sharedMaterial = guidanceMats[0];
+        cabinLampRenderer.sharedMaterial = guidanceMats[0];
+    }
+
+    public void ThermalsOFF()
+    {
+        rend.sharedMaterial = materials[0]; //default monster material
+        quarryFlareRenderer.sharedMaterial = guidanceMats[1];
+        campLampRenderer.sharedMaterial = guidanceMats[2];
+        towerLampRenderer.sharedMaterial = guidanceMats[2];
+        boatLampRenderer.sharedMaterial = guidanceMats[2];
+        cabinLampRenderer.sharedMaterial = guidanceMats[2];
     }
 }

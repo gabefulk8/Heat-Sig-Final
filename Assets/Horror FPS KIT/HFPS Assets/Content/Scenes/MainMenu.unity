@@ -2806,7 +2806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cfuStatus: PSXEffects v1.18.4 - version ahead?!
   sections: 01
-  customRes: {x: 776, y: 436}
+  customRes: {x: 607, y: 341}
   resolutionFactor: 2
   limitFramerate: -1
   skipFrames: 0
@@ -2978,7 +2978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cfuStatus: PSXEffects v1.18.4 - version ahead?!
   sections: 01000100
-  customRes: {x: 337, y: 189}
+  customRes: {x: 135, y: 76}
   resolutionFactor: 5
   limitFramerate: -1
   skipFrames: 0
@@ -3597,6 +3597,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6278561042711762158, guid: e274edc91acbb9d42a96268a7312de7c,
+        type: 3}
+      propertyPath: NewGameBuildName
+      value: World
       objectReference: {fileID: 0}
     - target: {fileID: 6278561043218115975, guid: e274edc91acbb9d42a96268a7312de7c,
         type: 3}
