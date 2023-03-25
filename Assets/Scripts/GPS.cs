@@ -183,31 +183,31 @@ public class GPS : MonoBehaviour, ISaveable
         //Map of Locations
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            locations[0].text = "<s>Location 1: 100, 200, 300<s>";
+            locations[0].text = "<s>816, 489<s>";
             QuarryScanned = true;
             playAudio(checkmark);
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            locations[1].text = "<s>Location 2: 100, 200, 300<s>";
+            locations[1].text = "<s>819, -546<s>";
             RangerScanned = true;
             playAudio(checkmark);
         }
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
-            locations[2].text = "<s>Location 3: 100, 200, 300<s>";
+            locations[2].text = "<s>-791, 90<s>";
             CabinScanned = true;
             playAudio(checkmark);
         }
         if (Input.GetKeyDown(KeyCode.Alpha7))
         {
-            locations[3].text = "<s>Location 4: 100, 200, 300<s>";
+            locations[3].text = "<s>-857, -285<s>";
             BoatScanned = true;
             playAudio(checkmark);
         }
         if (Input.GetKeyDown(KeyCode.Alpha8))
         {
-            locations[4].text = "<s>Location 5: 100, 200, 300<s>";
+            locations[4].text = "<s>1694, -436<s>";
             CampScanned = true;
             playAudio(checkmark);
         }
