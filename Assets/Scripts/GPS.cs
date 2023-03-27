@@ -363,9 +363,30 @@ public class GPS : MonoBehaviour, ISaveable
     public void OnLoad(JToken token)
     {
         GetComponent<GPS>().QuarryScanned = token["QuarryScanned"].ToObject<bool>();
+        if (QuarryScanned == true)
+        {
+            locations[0].text = "<s>816, 489<s>";
+        }
+
         GetComponent<GPS>().RangerScanned = token["RangerScanned"].ToObject<bool>();
+        if (RangerScanned == true)
+        {
+            locations[1].text = "<s>819, -546<s>";
+        }
         GetComponent<GPS>().CabinScanned = token["CabinScanned"].ToObject<bool>();
+        if (CabinScanned == true)
+        {
+            locations[2].text = "<s>-791, 90<s>";
+        }
         GetComponent<GPS>().BoatScanned = token["BoatScanned"].ToObject<bool>();
+        if (BoatScanned == true)
+        {
+            locations[3].text = "<s>-857, -285<s>";
+        }
         GetComponent<GPS>().CampScanned = token["CampScanned"].ToObject<bool>();
+        if (CampScanned == true)
+        {
+            locations[4].text = "<s>1694, -436<s>";
+        }
     }
 }
