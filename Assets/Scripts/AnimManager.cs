@@ -25,52 +25,86 @@ public class AnimManager : MonoBehaviour
     public bool shipPlayed = false;
     public bool campPlayed = false;
 
+    public GameObject mineFlare;
+    public GameObject towerLight;
+    public GameObject cabinLight;
+    public GameObject boatLight;
+    public GameObject campLight;
+
+    public GameObject mineText;
+    public GameObject towerText;
+    public GameObject cabinText;
+    public GameObject boatText;
+    public GameObject campText;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Y) && minePlayed == false) //Mine Animation Trigger
+        if (minePlayed == false && Vector3.Distance(this.transform.position, mineFlare.transform.position) < 3) //Mine Animation Trigger
         {
-            mainCam.SetActive(false);
-            mineCam.SetActive(true);
-            RenderSettings.ambientLight = new Color(0.8f, 0.8f, 0.8f);
-            playMineAnim();
+            mineText.SetActive(true);
+            
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                playMineAnim();
+            }
+        } else {
+            mineText.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.U) && cabinPlayed == false) //Cabin Animation Trigger
+        if (cabinPlayed == false && Vector3.Distance(this.transform.position, cabinLight.transform.position) < 3) //Cabin Animation Trigger
         {
-            mainCam.SetActive(false);
-            cabinCam.SetActive(true);
-            RenderSettings.ambientLight = new Color(0.8f, 0.8f, 0.8f);
-            playCabinAnim();
+            cabinText.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                playCabinAnim();
+            }
+        } else {
+            cabinText.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.I) && rangerPlayed == false) //Ranger Animation Trigger
+        if (rangerPlayed == false && Vector3.Distance(this.transform.position, towerLight.transform.position) < 3) //Ranger Animation Trigger
         {
-            mainCam.SetActive(false);
-            rangerCam.SetActive(true);
-            RenderSettings.ambientLight = new Color(0.8f, 0.8f, 0.8f);
-            playRangerAnim();
+            towerText.SetActive(true);
+            
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                playRangerAnim();
+            }
+        } else {
+            towerText.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.O) && shipPlayed == false) //Ship Animation Trigger
+        if (shipPlayed == false && Vector3.Distance(this.transform.position, boatLight.transform.position) < 3) //Ship Animation Trigger
         {
-            mainCam.SetActive(false);
-            shipCam.SetActive(true);
-            RenderSettings.ambientLight = new Color(0.8f, 0.8f, 0.8f);
-            playShipAnim();
+            boatText.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                playShipAnim();
+            }
+        } else {
+            boatText.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.P) && campPlayed == false) //Camp Animation Trigger
+        if (campPlayed == false && Vector3.Distance(this.transform.position, campLight.transform.position) < 3) //Camp Animation Trigger
         {
-            mainCam.SetActive(false);
-            campCam.SetActive(true);
-            RenderSettings.ambientLight = new Color(0.8f, 0.8f, 0.8f);
-            playCampAnim();
+            campText.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                playCampAnim();
+            }
+        } else {
+            campText.SetActive(false);
         }
     }
 
-    void playMineAnim() //Play Mine Animation
+    public void playMineAnim() //Play Mine Animation
     {
+        mainCam.SetActive(false);
+        mineCam.SetActive(true);
+        RenderSettings.ambientLight = new Color(0.8f, 0.8f, 0.8f);
         GetComponent<DroneSwap>().ThermalsON();
         tempCam = mineCam;
         mineAnimator.SetTrigger("PlayMineAnim");
@@ -83,6 +117,9 @@ public class AnimManager : MonoBehaviour
 
     void playCabinAnim() //Play Cabin Animation
     {
+        mainCam.SetActive(false);
+        cabinCam.SetActive(true);
+        RenderSettings.ambientLight = new Color(0.8f, 0.8f, 0.8f);
         GetComponent<DroneSwap>().ThermalsON();
         tempCam = cabinCam;
         cabinAnimator.SetTrigger("PlayCabinAnim");
@@ -95,6 +132,9 @@ public class AnimManager : MonoBehaviour
 
     void playRangerAnim() //Play Ranger Animation
     {
+        mainCam.SetActive(false);
+        rangerCam.SetActive(true);
+        RenderSettings.ambientLight = new Color(0.8f, 0.8f, 0.8f);
         GetComponent<DroneSwap>().ThermalsON();
         tempCam = rangerCam;
         rangerAnimator.SetTrigger("PlayRangerAnim");
@@ -107,6 +147,9 @@ public class AnimManager : MonoBehaviour
 
     void playShipAnim() //Play Ship Animation
     {
+        mainCam.SetActive(false);
+        shipCam.SetActive(true);
+        RenderSettings.ambientLight = new Color(0.8f, 0.8f, 0.8f);
         GetComponent<DroneSwap>().ThermalsON();
         tempCam = shipCam;
         shipAnimator.SetTrigger("PlayShipAnim");
@@ -119,6 +162,9 @@ public class AnimManager : MonoBehaviour
 
     void playCampAnim() //Play Camp Animation
     {
+        mainCam.SetActive(false);
+        campCam.SetActive(true);
+        RenderSettings.ambientLight = new Color(0.8f, 0.8f, 0.8f);
         GetComponent<DroneSwap>().ThermalsON();
         tempCam = campCam;
         campAnimator.SetTrigger("PlayCampAnim");
