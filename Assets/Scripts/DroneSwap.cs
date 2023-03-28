@@ -23,6 +23,12 @@ public class DroneSwap : MonoBehaviour
 
     private InputAction playerControls;
 
+    public AudioClip toDrone;
+    public AudioClip droneStatic;
+    public AudioClip fromDrone;
+    public AudioSource droneAudio;
+    public AudioSource playerAudio;
+
 
     void Start()
     {
@@ -49,6 +55,8 @@ public class DroneSwap : MonoBehaviour
     void ToMain()
     {
         //enable movement, swap to main camera
+        droneAudio.Stop();
+        playerAudio.PlayOneShot(fromDrone);
         droneCam.SetActive(false);
         mainCam.SetActive(true);
 
@@ -65,6 +73,8 @@ public class DroneSwap : MonoBehaviour
     void ToDrone()
     {
         //disable movement, swap to drone camera
+        droneAudio.PlayOneShot(toDrone);
+        droneAudio.PlayDelayed(0.6f);
         mainCam.SetActive(false);
         droneCam.SetActive(true);
 
