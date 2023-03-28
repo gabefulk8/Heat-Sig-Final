@@ -71,6 +71,14 @@ public class GPS : MonoBehaviour, ISaveable
     public GameObject hiddenTape;
     public GameObject hiddenTapeUI;
 
+    //Bolt Cutters
+    public GameObject boltCutters;
+    public GameObject boltCuttersUI;
+    public bool HasBoltCutters;
+    public Text mineDoorText;
+    public GameObject mineDoor;
+    public GameObject mineDoorTextContainer;
+
     //Intro Dialogue
     [SerializeField] public bool IntroPlayed = false;
 
@@ -120,7 +128,7 @@ public class GPS : MonoBehaviour, ISaveable
             cabinTapeUI.SetActive(false);
         }
 
-        if (Vector3.Distance(this.transform.position, boatTape.transform.position) < 2 && HasBoatTape == false) //picking up boat tape
+        if (Vector3.Distance(this.transform.position, boatTape.transform.position) < 1.5f && HasBoatTape == false) //picking up boat tape
         {
             boatTapeUI.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
@@ -157,6 +165,33 @@ public class GPS : MonoBehaviour, ISaveable
             }
         } else {
             hiddenTapeUI.SetActive(false);
+        }
+
+        if (Vector3.Distance(this.transform.position, boltCutters.transform.position) < 1.5f && HasBoltCutters == false) //picking up bolt cutters
+        {
+            boltCuttersUI.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                boltCutters.SetActive(false);
+                HasBoltCutters = true;
+            }
+        } else {
+            boltCuttersUI.SetActive(false);
+        }
+
+        if (Vector3.Distance(this.transform.position, mineDoor.transform.position) < 7f)
+        {
+            mineDoorTextContainer.SetActive(true);
+            if (HasBoltCutters == false)
+            {
+                mineDoorText.text = "Missing the required Tool";
+            }
+            else if (HasBoltCutters == true)
+            {
+                mineDoorText.text = "Press 'E' to use Bolt Cutters";
+            }
+        } else {
+            mineDoorTextContainer.SetActive(false);
         }
 
         Menus();
@@ -438,7 +473,8 @@ public class GPS : MonoBehaviour, ISaveable
             { "HasCabinTape", GetComponent<GPS>().HasCabinTape },
             { "HasBoatTape", GetComponent<GPS>().HasBoatTape },
             { "HasCampTape", GetComponent<GPS>().HasCampTape },
-            { "HasHiddenTape", GetComponent<GPS>().HasHiddenTape }
+            { "HasHiddenTape", GetComponent<GPS>().HasHiddenTape },
+            { "HasBoltCutters", GetComponent<GPS>().HasBoltCutters }
         };
     }
 
@@ -511,6 +547,12 @@ public class GPS : MonoBehaviour, ISaveable
         {
             hiddenTape.SetActive(false);
             hasLog[5] = true;
+        }
+
+        GetComponent<GPS>().HasBoltCutters = token["HasBoltCutters"].ToObject<bool>();
+        if (HasBoltCutters == true)
+        {
+            boltCutters.SetActive(false);
         }
     }
 }
