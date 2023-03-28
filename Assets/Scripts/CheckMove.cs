@@ -16,8 +16,7 @@ public class CheckMove : MonoBehaviour
 
     void Start()
     {
-        animator = GetComponent<Animator>();
-
+        animator = GetComponentInChildren<Animator>();
     }
 
 
@@ -33,6 +32,14 @@ public class CheckMove : MonoBehaviour
         {
             animator.SetBool("IsMoving", false);
         }
+
+
+        if (Vector3.Distance(transform.position, target.position) < 24)
+        {
+            animator.SetBool("IsChase", true);
+            GetComponent<Pathfinding.AIPath>().SetSpeed(11);
+        }
+
 
 
         if (Vector3.Distance(transform.position, target.position) < 5)
