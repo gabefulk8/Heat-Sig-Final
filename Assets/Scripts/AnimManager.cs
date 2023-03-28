@@ -111,7 +111,7 @@ public class AnimManager : MonoBehaviour
         minePlayed = true;
 
         RenderSettings.fogColor = Color.white;
-
+        GetComponent<GPS>().QuarryScanned = true;
         Invoke("ToMainCam", 7f);        
     }
 
@@ -126,7 +126,7 @@ public class AnimManager : MonoBehaviour
         cabinPlayed = true;
 
         RenderSettings.fogColor = Color.white;
-
+        GetComponent<GPS>().CabinScanned = true;
         Invoke("ToMainCam", 7f);
     }
 
@@ -141,7 +141,7 @@ public class AnimManager : MonoBehaviour
         rangerPlayed = true;
 
         RenderSettings.fogColor = Color.white;
-
+        GetComponent<GPS>().RangerScanned = true;
         Invoke("ToMainCam", 7f);
     }
 
@@ -156,7 +156,7 @@ public class AnimManager : MonoBehaviour
         shipPlayed = true;
 
         RenderSettings.fogColor = Color.white;
-
+        GetComponent<GPS>().BoatScanned = true;
         Invoke("ToMainCam", 7f);
     }
 
@@ -171,7 +171,7 @@ public class AnimManager : MonoBehaviour
         campPlayed = true;
 
         RenderSettings.fogColor = Color.white;
-
+        GetComponent<GPS>().CampScanned = true;
         Invoke("ToMainCam", 7f);
     }
 

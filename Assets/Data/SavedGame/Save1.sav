@@ -1,0 +1,138 @@
+{
+  "scene": "World",
+  "levelName": "World",
+  "levelNameKey": null,
+  "dateTime": "2023-03-28 16:05:37",
+  "playerData": {
+    "playerPosition": {
+      "x": 1674.35425,
+      "y": 46.18203,
+      "z": 326.677063,
+      "normalized": {
+        "x": 0.981134057,
+        "y": 0.0270616338,
+        "z": 0.191425443,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.00000012
+      },
+      "magnitude": 1706.54993,
+      "sqrMagnitude": 2912312.75
+    },
+    "cameraRotation": {
+      "x": 14.8000069,
+      "y": -25.4000034,
+      "normalized": {
+        "x": 0.503448069,
+        "y": -0.8640255,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.0
+      },
+      "magnitude": 29.3972855,
+      "sqrMagnitude": 864.2004
+    },
+    "characterState": 0,
+    "playerHealth": 100.0
+  },
+  "itemSwitcherData": {
+    "switcherActiveItem": -1,
+    "switcherWeaponItem": -1,
+    "switcher_item_flashlight": {
+      "FlashlightItem": {
+        "batteryPercentage": 100.0
+      }
+    },
+    "switcher_item_lantern": {
+      "LanternItem": {
+        "lightPercentage": 100.0,
+        "lightIntensity": 1.0,
+        "flameAlpha": 0.0
+      }
+    },
+    "switcher_item_candle": {
+      "CandleItem": {
+        "candleScale": 0.00113
+      }
+    },
+    "switcher_item_pistol": {
+      "WeaponController": {
+        "bulletsInMag": 7,
+        "uiShown": false
+      }
+    },
+    "switcher_item_shotgun": {
+      "WeaponController": {
+        "bulletsInMag": 7,
+        "uiShown": false
+      }
+    }
+  },
+  "inventoryData": {
+    "inv_slots_count": 10,
+    "slotsData": {
+      "inv_slot_0": "null",
+      "inv_slot_1": "null",
+      "inv_slot_2": "null",
+      "inv_slot_3": "null",
+      "inv_slot_4": "null",
+      "inv_slot_5": "null",
+      "inv_slot_6": "null",
+      "inv_slot_7": "null",
+      "inv_slot_8": "null",
+      "inv_slot_9": "null"
+    }
+  },
+  "objectivesData": {
+    "activeObjectives": {},
+    "touchedObjectives": {}
+  },
+  "saveablesData": {
+    "SaveObject_bb818a58b4ba4164bf9fb33c80c7ac59": {
+      "position": {
+        "x": 813.03,
+        "y": 9.29,
+        "z": 491.2,
+        "normalized": {
+          "x": 0.8558772,
+          "y": 0.009779589,
+          "z": 0.517086565,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 949.9377,
+        "sqrMagnitude": 902381.563
+      }
+    },
+    "GPS_664ef58e1dc743feb9c3cd08b9cbb836": {
+      "QuarryScanned": false,
+      "RangerScanned": false,
+      "CabinScanned": false,
+      "BoatScanned": false,
+      "CampScanned": false,
+      "IntroPlayed": false,
+      "HasRangerTape": false,
+      "HasCabinTape": false,
+      "HasBoatTape": false,
+      "HasCampTape": false,
+      "HasHiddenTape": true
+    },
+    "SaveObject_2b4a3da077f94af78b226eae4e678663": {
+      "position": {
+        "x": 1674.35425,
+        "y": 46.18203,
+        "z": 326.677063,
+        "normalized": {
+          "x": 0.981134057,
+          "y": 0.0270616338,
+          "z": 0.191425443,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 1706.54993,
+        "sqrMagnitude": 2912312.75
+      }
+    },
+    "Autosave_8c6c07a5d3ae4c4996326ce16007c0b0": {
+      "isSaved": false
+    }
+  }
+}
