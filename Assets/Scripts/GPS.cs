@@ -79,6 +79,9 @@ public class GPS : MonoBehaviour, ISaveable
     public GameObject mineDoor;
     public GameObject mineDoorTextContainer;
 
+    //Fade Panel
+    public GameObject fadePanel;
+
     //Intro Dialogue
     [SerializeField] public bool IntroPlayed = false;
 
@@ -97,6 +100,46 @@ public class GPS : MonoBehaviour, ISaveable
         audioSlider.direction = Slider.Direction.LeftToRight;
         numberoflogs = 0;
         beeptimer = 0;
+    }
+
+    private void FixedUpdate()
+    {
+        if (Vector3.Distance(this.transform.position, mineDoor.transform.position) < 7f)
+        {
+            mineDoorTextContainer.SetActive(true);
+            if (HasBoltCutters == false)
+            {
+                mineDoorText.text = "Missing the required Tool";
+            }
+            else if (HasBoltCutters == true)
+            {
+                mineDoorText.text = "Press 'E' to use Bolt Cutters";
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    fadePanel.SetActive(true);
+                    StartCoroutine(FadeIn(fadePanel.GetComponent<Image>()));
+                    Invoke("ToThankYou", 5);
+                }
+            }
+        }
+        else
+        {
+            mineDoorTextContainer.SetActive(false);
+        }
+    }
+
+    private YieldInstruction fadeInstruction = new YieldInstruction(); // fade to black before scene change to Thank you screen
+    IEnumerator FadeIn(Image image)
+    {
+        float elapsedTime = 0.0f;
+        Color c = image.color;
+        while (elapsedTime < 4.5f)
+        {
+            yield return fadeInstruction;
+            elapsedTime += Time.deltaTime;
+            c.a = Mathf.Clamp01(elapsedTime / 4.5f);
+            image.color = c;
+        }
     }
 
     // Update is called once per frame
@@ -179,21 +222,6 @@ public class GPS : MonoBehaviour, ISaveable
             boltCuttersUI.SetActive(false);
         }
 
-        if (Vector3.Distance(this.transform.position, mineDoor.transform.position) < 7f)
-        {
-            mineDoorTextContainer.SetActive(true);
-            if (HasBoltCutters == false)
-            {
-                mineDoorText.text = "Missing the required Tool";
-            }
-            else if (HasBoltCutters == true)
-            {
-                mineDoorText.text = "Press 'E' to use Bolt Cutters";
-            }
-        } else {
-            mineDoorTextContainer.SetActive(false);
-        }
-
         Menus();
 
         UpdatePos();
@@ -270,6 +298,13 @@ public class GPS : MonoBehaviour, ISaveable
                 items[i].SetActive(true);
             }
         }
+    }
+
+    public void ToThankYou() //to thank you scene
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        GameObject.Find("_GAMEUI").GetComponent<HFPS_GameManager>().ChangeScene("ThankYou");
     }
 
     //Updates the position of the player 
