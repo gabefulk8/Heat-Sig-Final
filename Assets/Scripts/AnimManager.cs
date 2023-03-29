@@ -109,7 +109,7 @@ public class AnimManager : MonoBehaviour
         tempCam = mineCam;
         mineAnimator.SetTrigger("PlayMineAnim");
         minePlayed = true;
-
+        GetComponent<GPS>().locations[0].text = "<s>816, 489<s>";
         RenderSettings.fogColor = Color.white;
         GetComponent<GPS>().QuarryScanned = true;
         Invoke("ToMainCam", 7f);        
@@ -124,7 +124,7 @@ public class AnimManager : MonoBehaviour
         tempCam = cabinCam;
         cabinAnimator.SetTrigger("PlayCabinAnim");
         cabinPlayed = true;
-
+        GetComponent<GPS>().locations[2].text = "<s>-791, 90<s>";
         RenderSettings.fogColor = Color.white;
         GetComponent<GPS>().CabinScanned = true;
         Invoke("ToMainCam", 7f);
@@ -139,7 +139,7 @@ public class AnimManager : MonoBehaviour
         tempCam = rangerCam;
         rangerAnimator.SetTrigger("PlayRangerAnim");
         rangerPlayed = true;
-
+        GetComponent<GPS>().locations[1].text = "<s>819, -546<s>";
         RenderSettings.fogColor = Color.white;
         GetComponent<GPS>().RangerScanned = true;
         Invoke("ToMainCam", 7f);
@@ -154,7 +154,7 @@ public class AnimManager : MonoBehaviour
         tempCam = shipCam;
         shipAnimator.SetTrigger("PlayShipAnim");
         shipPlayed = true;
-
+        GetComponent<GPS>().locations[3].text = "<s>-857, -285<s>";
         RenderSettings.fogColor = Color.white;
         GetComponent<GPS>().BoatScanned = true;
         Invoke("ToMainCam", 7f);
@@ -169,7 +169,7 @@ public class AnimManager : MonoBehaviour
         tempCam = campCam;
         campAnimator.SetTrigger("PlayCampAnim");
         campPlayed = true;
-
+        GetComponent<GPS>().locations[4].text = "<s>1694, -436<s>";
         RenderSettings.fogColor = Color.white;
         GetComponent<GPS>().CampScanned = true;
         Invoke("ToMainCam", 7f);
@@ -177,6 +177,7 @@ public class AnimManager : MonoBehaviour
 
     void ToMainCam()
     {
+        GetComponent<GPS>().source1.PlayOneShot(GetComponent<GPS>().checkmark);
         tempCam.SetActive(false);
         RenderSettings.ambientLight = new Color(0.227451f, 0.227451f, 0.227451f);
         RenderSettings.fogColor = Color.black;

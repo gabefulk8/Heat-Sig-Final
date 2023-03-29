@@ -22,8 +22,8 @@ public class GPS : MonoBehaviour, ISaveable
     private int beeptimer;
 
     //Map
-    [SerializeField] TMP_Text[] locations;
-    [SerializeField] private AudioClip checkmark;
+    [SerializeField] public TMP_Text[] locations;
+    [SerializeField] public AudioClip checkmark;
 
     //Audio Logs
     [SerializeField] TMP_Text audioLogText;
@@ -40,7 +40,7 @@ public class GPS : MonoBehaviour, ISaveable
 
 
     //Audio Sources
-    [SerializeField] AudioSource source1;
+    [SerializeField] public AudioSource source1;
     [SerializeField] AudioSource source2;
 
     private int numberoflogs;
