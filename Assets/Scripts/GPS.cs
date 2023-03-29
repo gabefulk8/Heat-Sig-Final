@@ -79,6 +79,10 @@ public class GPS : MonoBehaviour, ISaveable
     public GameObject mineDoor;
     public GameObject mineDoorTextContainer;
 
+    //sound effects
+    public AudioClip paperOpen;
+    public AudioClip paperClose;
+
     //Fade Panel
     public GameObject fadePanel;
 
@@ -253,7 +257,11 @@ public class GPS : MonoBehaviour, ISaveable
                     menuState = 1;
          
                 }
-                else if (Input.GetKeyDown(KeyCode.Alpha2) && inMenu == false) menuState = 2;
+                else if (Input.GetKeyDown(KeyCode.Alpha2) && inMenu == false)
+                {
+                    source1.PlayOneShot(paperOpen);
+                    menuState = 2;
+                }
                 else if (Input.GetKeyDown(KeyCode.Alpha3) && inMenu == false) menuState = 3;
 
                 break;
@@ -273,7 +281,11 @@ public class GPS : MonoBehaviour, ISaveable
             //Map
             case 2:
                 inMenu = true;
-                if (Input.GetKeyDown(KeyCode.Alpha2)) menuState = 0;
+                if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+                    menuState = 0;
+                    source1.PlayOneShot(paperClose);
+                }
                 if (items[1].transform.localPosition.y < -0.2) items[1].transform.localPosition += new Vector3(0, 0.05f, 0);
                 map();
                 break;
