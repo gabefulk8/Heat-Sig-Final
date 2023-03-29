@@ -82,6 +82,7 @@ public class GPS : MonoBehaviour, ISaveable
     //sound effects
     public AudioClip paperOpen;
     public AudioClip paperClose;
+    public GameObject heli;
 
     //Fade Panel
     public GameObject fadePanel;
@@ -559,7 +560,10 @@ public class GPS : MonoBehaviour, ISaveable
             GetComponent<AnimManager>().campPlayed = true;
         }
         GetComponent<GPS>().IntroPlayed = token["IntroPlayed"].ToObject<bool>();
-
+        if (IntroPlayed == false)
+        {
+            heli.SetActive(false);
+        } 
 
         GetComponent<GPS>().HasRangerTape = token["HasRangerTape"].ToObject<bool>();
         if (HasRangerTape == true)
