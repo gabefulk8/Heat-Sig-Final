@@ -37,6 +37,8 @@ public class AnimManager : MonoBehaviour
     public GameObject boatText;
     public GameObject campText;
 
+    public AudioSource playerAudio;
+
     void Update()
     {
         if (minePlayed == false && Vector3.Distance(this.transform.position, mineFlare.transform.position) < 3) //Mine Animation Trigger
@@ -102,6 +104,8 @@ public class AnimManager : MonoBehaviour
 
     public void playMineAnim() //Play Mine Animation
     {
+        playerAudio.PlayOneShot(GetComponent<DroneSwap>().toDrone);
+        playerAudio.PlayDelayed(0.6f);
         mainCam.SetActive(false);
         mineCam.SetActive(true);
         RenderSettings.ambientLight = new Color(0.8f, 0.8f, 0.8f);
@@ -117,6 +121,8 @@ public class AnimManager : MonoBehaviour
 
     void playCabinAnim() //Play Cabin Animation
     {
+        playerAudio.PlayOneShot(GetComponent<DroneSwap>().toDrone);
+        playerAudio.PlayDelayed(0.6f);
         mainCam.SetActive(false);
         cabinCam.SetActive(true);
         RenderSettings.ambientLight = new Color(0.8f, 0.8f, 0.8f);
@@ -132,6 +138,8 @@ public class AnimManager : MonoBehaviour
 
     void playRangerAnim() //Play Ranger Animation
     {
+        playerAudio.PlayOneShot(GetComponent<DroneSwap>().toDrone);
+        playerAudio.PlayDelayed(0.6f);
         mainCam.SetActive(false);
         rangerCam.SetActive(true);
         RenderSettings.ambientLight = new Color(0.8f, 0.8f, 0.8f);
@@ -147,6 +155,8 @@ public class AnimManager : MonoBehaviour
 
     void playShipAnim() //Play Ship Animation
     {
+        playerAudio.PlayOneShot(GetComponent<DroneSwap>().toDrone);
+        playerAudio.PlayDelayed(0.6f);
         mainCam.SetActive(false);
         shipCam.SetActive(true);
         RenderSettings.ambientLight = new Color(0.8f, 0.8f, 0.8f);
@@ -162,6 +172,8 @@ public class AnimManager : MonoBehaviour
 
     void playCampAnim() //Play Camp Animation
     {
+        playerAudio.PlayOneShot(GetComponent<DroneSwap>().toDrone);
+        playerAudio.PlayDelayed(0.6f);
         mainCam.SetActive(false);
         campCam.SetActive(true);
         RenderSettings.ambientLight = new Color(0.8f, 0.8f, 0.8f);
@@ -177,7 +189,10 @@ public class AnimManager : MonoBehaviour
 
     void ToMainCam()
     {
-        GetComponent<GPS>().source1.PlayOneShot(GetComponent<GPS>().checkmark);
+        playerAudio.PlayOneShot(GetComponent<DroneSwap>().fromDrone);
+        Invoke("Check", 1f);
+        playerAudio.Stop();
+        playerAudio.PlayOneShot(GetComponent<DroneSwap>().fromDrone);
         tempCam.SetActive(false);
         RenderSettings.ambientLight = new Color(0.227451f, 0.227451f, 0.227451f);
         RenderSettings.fogColor = Color.black;
@@ -185,5 +200,10 @@ public class AnimManager : MonoBehaviour
         GetComponent<DroneSwap>().ThermalsOFF();
 
         mainCam.SetActive(true);
+    }
+
+    public void Check()
+    {
+        GetComponent<GPS>().source1.PlayOneShot(GetComponent<GPS>().checkmark);
     }
 }
