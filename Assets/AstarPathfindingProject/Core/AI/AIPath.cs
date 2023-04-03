@@ -5,7 +5,6 @@ using System.Collections.Generic;
 namespace Pathfinding {
 	using Pathfinding.RVO;
 	using Pathfinding.Util;
-
 	/// <summary>
 	/// AI for following paths.
 	///
@@ -63,6 +62,7 @@ namespace Pathfinding {
 	/// </summary>
 	[AddComponentMenu("Pathfinding/AI/AIPath (2D,3D)")]
 	public partial class AIPath : AIBase, IAstarAI {
+
 		/// <summary>
 		/// How quickly the agent accelerates.
 		/// Positive values represent an acceleration in world units per second squared.
@@ -199,6 +199,11 @@ namespace Pathfinding {
 			}
 		}
 
+		public void SetSpeed(float newSpeed)
+        {
+			maxSpeed = newSpeed;
+        }
+
 		/// <summary>\copydoc Pathfinding::IAstarAI::reachedEndOfPath</summary>
 		public bool reachedEndOfPath { get; protected set; }
 
@@ -232,8 +237,8 @@ namespace Pathfinding {
 		/// <summary>\copydoc Pathfinding::IAstarAI::maxSpeed</summary>
 		float IAstarAI.maxSpeed { get { return maxSpeed; } set { maxSpeed = value; } }
 
-		/// <summary>\copydoc Pathfinding::IAstarAI::canSearch</summary>
-		bool IAstarAI.canSearch { get { return canSearch; } set { canSearch = value; } }
+	/// <summary>\copydoc Pathfinding::IAstarAI::canSearch</summary>
+	bool IAstarAI.canSearch { get { return canSearch; } set { canSearch = value; } }
 
 		/// <summary>\copydoc Pathfinding::IAstarAI::canMove</summary>
 		bool IAstarAI.canMove { get { return canMove; } set { canMove = value; } }
@@ -503,6 +508,7 @@ namespace Pathfinding {
 			if (!alwaysDrawGizmos) OnDrawGizmosInternal();
 		}
 
+
 		void OnDrawGizmosInternal () {
 			var newGizmoHash = pickNextWaypointDist.GetHashCode() ^ slowdownDistance.GetHashCode() ^ endReachedDistance.GetHashCode();
 
@@ -527,5 +533,10 @@ namespace Pathfinding {
 			if (version < 1) rotationSpeed *= 90;
 			return base.OnUpgradeSerializedData(version, unityThread);
 		}
+
+
+
+
+
 	}
 }
