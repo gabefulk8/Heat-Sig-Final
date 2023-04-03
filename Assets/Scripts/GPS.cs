@@ -22,8 +22,8 @@ public class GPS : MonoBehaviour, ISaveable
     private int beeptimer;
 
     //Map
-    [SerializeField] TMP_Text[] locations;
-    [SerializeField] private AudioClip checkmark;
+    [SerializeField] public TMP_Text[] locations;
+    [SerializeField] public AudioClip checkmark;
 
     //Audio Logs
     [SerializeField] TMP_Text audioLogText;
@@ -40,12 +40,10 @@ public class GPS : MonoBehaviour, ISaveable
 
 
     //Audio Sources
-    [SerializeField] AudioSource source1;
+    [SerializeField] public AudioSource source1;
     [SerializeField] AudioSource source2;
 
-    [SerializeField] TMP_Text sampletext;
     private int numberoflogs;
-    [SerializeField] Image arrow;
 
     //LocationBooleans
     [SerializeField] public bool QuarryScanned = false;
@@ -53,6 +51,44 @@ public class GPS : MonoBehaviour, ISaveable
     [SerializeField] public bool CabinScanned = false;
     [SerializeField] public bool BoatScanned = false;
     [SerializeField] public bool CampScanned = false;
+
+    //LogBooleans
+    [SerializeField] public bool HasRangerTape = false;
+    [SerializeField] public bool HasCabinTape = false;
+    [SerializeField] public bool HasBoatTape = false;
+    [SerializeField] public bool HasCampTape = false;
+    [SerializeField] public bool HasHiddenTape = false;
+
+    //LogVariables
+    public GameObject rangerTape;
+    public GameObject rangerTapeUI;
+    public GameObject cabinTape;
+    public GameObject cabinTapeUI;
+    public GameObject boatTape;
+    public GameObject boatTapeUI;
+    public GameObject campTape;
+    public GameObject campTapeUI;
+    public GameObject hiddenTape;
+    public GameObject hiddenTapeUI;
+
+    //Bolt Cutters
+    public GameObject boltCutters;
+    public GameObject boltCuttersUI;
+    public bool HasBoltCutters;
+    public Text mineDoorText;
+    public GameObject mineDoor;
+    public GameObject mineDoorTextContainer;
+
+    //sound effects
+    public AudioClip paperOpen;
+    public AudioClip paperClose;
+    public GameObject heli;
+
+    //Fade Panel
+    public GameObject fadePanel;
+
+    //Intro Dialogue
+    [SerializeField] public bool IntroPlayed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -69,25 +105,131 @@ public class GPS : MonoBehaviour, ISaveable
         audioSlider.direction = Slider.Direction.LeftToRight;
         numberoflogs = 0;
         beeptimer = 0;
-    
+    }
+
+    private void FixedUpdate()
+    {
+        if (Vector3.Distance(this.transform.position, mineDoor.transform.position) < 7f)
+        {
+            mineDoorTextContainer.SetActive(true);
+            if (HasBoltCutters == false)
+            {
+                mineDoorText.text = "Missing the required Tool";
+            }
+            else if (HasBoltCutters == true)
+            {
+                mineDoorText.text = "Press 'E' to use Bolt Cutters";
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    fadePanel.SetActive(true);
+                    StartCoroutine(FadeIn(fadePanel.GetComponent<Image>()));
+                    Invoke("ToThankYou", 5);
+                }
+            }
+        }
+        else
+        {
+            mineDoorTextContainer.SetActive(false);
+        }
+    }
+
+    private YieldInstruction fadeInstruction = new YieldInstruction(); // fade to black before scene change to Thank you screen
+    IEnumerator FadeIn(Image image)
+    {
+        float elapsedTime = 0.0f;
+        Color c = image.color;
+        while (elapsedTime < 4.5f)
+        {
+            yield return fadeInstruction;
+            elapsedTime += Time.deltaTime;
+            c.a = Mathf.Clamp01(elapsedTime / 4.5f);
+            image.color = c;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Vector3.Distance(this.transform.position, rangerTape.transform.position) < 2 && HasRangerTape == false) //picking up ranger tape
+        {
+            rangerTapeUI.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                rangerTape.SetActive(false);
+                HasRangerTape = true;
+                hasLog[1] = true;
+            }
+        } else {
+            rangerTapeUI.SetActive(false);
+        }
+
+        if (Vector3.Distance(this.transform.position, cabinTape.transform.position) < 2 && HasCabinTape == false) //picking up cabin tape
+        {
+            cabinTapeUI.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                cabinTape.SetActive(false);
+                HasCabinTape = true;
+                hasLog[2] = true;
+            }
+        } else {
+            cabinTapeUI.SetActive(false);
+        }
+
+        if (Vector3.Distance(this.transform.position, boatTape.transform.position) < 1.5f && HasBoatTape == false) //picking up boat tape
+        {
+            boatTapeUI.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                boatTape.SetActive(false);
+                HasBoatTape = true;
+                hasLog[3] = true;
+            }
+        } else {
+            boatTapeUI.SetActive(false);
+        }
+
+        if (Vector3.Distance(this.transform.position, campTape.transform.position) < 2 && HasCampTape == false) //picking up campsite tape
+        {
+            campTapeUI.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                campTape.SetActive(false);
+                HasCampTape = true;
+                hasLog[4] = true;
+            }
+        } else {
+            campTapeUI.SetActive(false);
+        }
+
+        if (Vector3.Distance(this.transform.position, hiddenTape.transform.position) < 2 && HasHiddenTape == false) //picking up hidden tape
+        {
+            hiddenTapeUI.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                hiddenTape.SetActive(false);
+                HasHiddenTape = true;
+                hasLog[5] = true;
+            }
+        } else {
+            hiddenTapeUI.SetActive(false);
+        }
+
+        if (Vector3.Distance(this.transform.position, boltCutters.transform.position) < 1.5f && HasBoltCutters == false) //picking up bolt cutters
+        {
+            boltCuttersUI.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                boltCutters.SetActive(false);
+                HasBoltCutters = true;
+            }
+        } else {
+            boltCuttersUI.SetActive(false);
+        }
+
         Menus();
 
         UpdatePos();
-
-        if (Input.GetKeyDown(KeyCode.H)) hasLog[1] = true;
-        if (Input.GetKeyDown(KeyCode.J)) hasLog[2] = true;
-        if (Input.GetKeyDown(KeyCode.K)) hasLog[3] = true;
-        if (Input.GetKeyDown(KeyCode.L)) hasLog[4] = true;
-        if (Input.GetKeyDown(KeyCode.Z)) hasLog[5] = true;
-
-
-        //ligma balls
-        //arrow.rectTransform.eulerAngles = new Vector3(0, 0, -(audioSlider.value * 360));
     }
 
     void Menus()
@@ -116,7 +258,11 @@ public class GPS : MonoBehaviour, ISaveable
                     menuState = 1;
          
                 }
-                else if (Input.GetKeyDown(KeyCode.Alpha2) && inMenu == false) menuState = 2;
+                else if (Input.GetKeyDown(KeyCode.Alpha2) && inMenu == false)
+                {
+                    source1.PlayOneShot(paperOpen);
+                    menuState = 2;
+                }
                 else if (Input.GetKeyDown(KeyCode.Alpha3) && inMenu == false) menuState = 3;
 
                 break;
@@ -136,7 +282,11 @@ public class GPS : MonoBehaviour, ISaveable
             //Map
             case 2:
                 inMenu = true;
-                if (Input.GetKeyDown(KeyCode.Alpha2)) menuState = 0;
+                if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+                    menuState = 0;
+                    source1.PlayOneShot(paperClose);
+                }
                 if (items[1].transform.localPosition.y < -0.2) items[1].transform.localPosition += new Vector3(0, 0.05f, 0);
                 map();
                 break;
@@ -161,6 +311,13 @@ public class GPS : MonoBehaviour, ISaveable
                 items[i].SetActive(true);
             }
         }
+    }
+
+    public void ToThankYou() //to thank you scene
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        GameObject.Find("_GAMEUI").GetComponent<HFPS_GameManager>().ChangeScene("ThankYou");
     }
 
     //Updates the position of the player 
@@ -281,6 +438,8 @@ public class GPS : MonoBehaviour, ISaveable
 
     }
 
+    
+
 
     //sound effects
     void playAudio(AudioClip whatsoundeffect)
@@ -347,6 +506,7 @@ public class GPS : MonoBehaviour, ISaveable
         }
     }
 
+
     public Dictionary<string, object> OnSave()
     {
         return new Dictionary<string, object>
@@ -355,9 +515,15 @@ public class GPS : MonoBehaviour, ISaveable
             { "RangerScanned", GetComponent<GPS>().RangerScanned },
             { "CabinScanned", GetComponent<GPS>().CabinScanned },
             { "BoatScanned", GetComponent<GPS>().BoatScanned },
-            { "CampScanned", GetComponent<GPS>().CampScanned }
+            { "CampScanned", GetComponent<GPS>().CampScanned },
+            { "IntroPlayed", GetComponent<GPS>().IntroPlayed },
+            { "HasRangerTape", GetComponent<GPS>().HasRangerTape },
+            { "HasCabinTape", GetComponent<GPS>().HasCabinTape },
+            { "HasBoatTape", GetComponent<GPS>().HasBoatTape },
+            { "HasCampTape", GetComponent<GPS>().HasCampTape },
+            { "HasHiddenTape", GetComponent<GPS>().HasHiddenTape },
+            { "HasBoltCutters", GetComponent<GPS>().HasBoltCutters }
         };
-        
     }
 
     public void OnLoad(JToken token)
@@ -366,27 +532,78 @@ public class GPS : MonoBehaviour, ISaveable
         if (QuarryScanned == true)
         {
             locations[0].text = "<s>816, 489<s>";
+            GetComponent<AnimManager>().minePlayed = true;
         }
 
         GetComponent<GPS>().RangerScanned = token["RangerScanned"].ToObject<bool>();
         if (RangerScanned == true)
         {
             locations[1].text = "<s>819, -546<s>";
+            GetComponent<AnimManager>().rangerPlayed = true;
         }
         GetComponent<GPS>().CabinScanned = token["CabinScanned"].ToObject<bool>();
         if (CabinScanned == true)
         {
             locations[2].text = "<s>-791, 90<s>";
+            GetComponent<AnimManager>().cabinPlayed = true;
         }
         GetComponent<GPS>().BoatScanned = token["BoatScanned"].ToObject<bool>();
         if (BoatScanned == true)
         {
             locations[3].text = "<s>-857, -285<s>";
+            GetComponent<AnimManager>().shipPlayed = true;
         }
         GetComponent<GPS>().CampScanned = token["CampScanned"].ToObject<bool>();
         if (CampScanned == true)
         {
             locations[4].text = "<s>1694, -436<s>";
+            GetComponent<AnimManager>().campPlayed = true;
+        }
+        GetComponent<GPS>().IntroPlayed = token["IntroPlayed"].ToObject<bool>();
+        if (IntroPlayed == false)
+        {
+            heli.SetActive(false);
+        } 
+
+        GetComponent<GPS>().HasRangerTape = token["HasRangerTape"].ToObject<bool>();
+        if (HasRangerTape == true)
+        {
+            rangerTape.SetActive(false);
+            hasLog[1] = true;
+        }
+
+        GetComponent<GPS>().HasCabinTape = token["HasCabinTape"].ToObject<bool>();
+        if (HasCabinTape == true)
+        {
+            cabinTape.SetActive(false);
+            hasLog[2] = true;
+        }
+
+        GetComponent<GPS>().HasBoatTape = token["HasBoatTape"].ToObject<bool>();
+        if (HasBoatTape == true)
+        {
+            boatTape.SetActive(false);
+            hasLog[3] = true;
+        }
+
+        GetComponent<GPS>().HasCampTape = token["HasCampTape"].ToObject<bool>();
+        if (HasCampTape == true)
+        {
+            campTape.SetActive(false);
+            hasLog[4] = true;
+        }
+
+        GetComponent<GPS>().HasHiddenTape = token["HasHiddenTape"].ToObject<bool>();
+        if (HasHiddenTape == true)
+        {
+            hiddenTape.SetActive(false);
+            hasLog[5] = true;
+        }
+
+        GetComponent<GPS>().HasBoltCutters = token["HasBoltCutters"].ToObject<bool>();
+        if (HasBoltCutters == true)
+        {
+            boltCutters.SetActive(false);
         }
     }
 }

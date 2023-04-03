@@ -2,33 +2,33 @@
   "scene": "World",
   "levelName": "World",
   "levelNameKey": null,
-  "dateTime": "2023-02-27 01:25:36",
+  "dateTime": "2023-03-28 23:39:46",
   "playerData": {
     "playerPosition": {
-      "x": -796.2983,
-      "y": 17.8022022,
-      "z": 95.46312,
+      "x": 196.44751,
+      "y": 4.98790073,
+      "z": 344.008179,
       "normalized": {
-        "x": -0.992646039,
-        "y": 0.02219179,
-        "z": 0.119002,
+        "x": 0.4958549,
+        "y": 0.0125900051,
+        "z": 0.868314147,
         "magnitude": 1.0,
         "sqrMagnitude": 1.00000012
       },
-      "magnitude": 802.197632,
-      "sqrMagnitude": 643521.063
+      "magnitude": 396.1794,
+      "sqrMagnitude": 156958.125
     },
     "cameraRotation": {
-      "x": 265.999817,
-      "y": -13.4000015,
+      "x": -21.4000034,
+      "y": -14.9999981,
       "normalized": {
-        "x": 0.9987335,
-        "y": -0.05031218,
+        "x": -0.818872333,
+        "y": -0.573975742,
         "magnitude": 1.0,
-        "sqrMagnitude": 0.99999994
+        "sqrMagnitude": 1.0
       },
-      "magnitude": 266.337128,
-      "sqrMagnitude": 70935.46
+      "magnitude": 26.1335049,
+      "sqrMagnitude": 682.9601
     },
     "characterState": 0,
     "playerHealth": 100.0
@@ -84,5 +84,56 @@
   "objectivesData": {
     "activeObjectives": {},
     "touchedObjectives": {}
+  },
+  "saveablesData": {
+    "SaveObject_bb818a58b4ba4164bf9fb33c80c7ac59": {
+      "position": {
+        "x": 813.03,
+        "y": 9.29,
+        "z": 491.2,
+        "normalized": {
+          "x": 0.8558772,
+          "y": 0.009779589,
+          "z": 0.517086565,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 949.9377,
+        "sqrMagnitude": 902381.563
+      }
+    },
+    "GPS_664ef58e1dc743feb9c3cd08b9cbb836": {
+      "QuarryScanned": false,
+      "RangerScanned": false,
+      "CabinScanned": false,
+      "BoatScanned": false,
+      "CampScanned": false,
+      "IntroPlayed": true,
+      "HasRangerTape": false,
+      "HasCabinTape": false,
+      "HasBoatTape": false,
+      "HasCampTape": false,
+      "HasHiddenTape": false,
+      "HasBoltCutters": false
+    },
+    "SaveObject_2b4a3da077f94af78b226eae4e678663": {
+      "position": {
+        "x": 196.44751,
+        "y": 4.98790073,
+        "z": 344.008179,
+        "normalized": {
+          "x": 0.4958549,
+          "y": 0.0125900051,
+          "z": 0.868314147,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 396.1794,
+        "sqrMagnitude": 156958.125
+      }
+    },
+    "Autosave_8c6c07a5d3ae4c4996326ce16007c0b0": {
+      "isSaved": false
+    }
   }
 }

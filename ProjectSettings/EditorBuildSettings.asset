@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Horror FPS KIT/HFPS Assets/Content/Scenes/MainMenu.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 9aa959960fff2014d9064643094534f3
   - enabled: 1
-    path: Assets/Horror FPS KIT/HFPS Assets/Content/Scenes/SceneLoader.unity
+    path: Assets/Scenes/SceneLoader.unity
     guid: e92d1d4c15fc07a42b93b5e226dab4fd
   - enabled: 1
     path: Assets/Horror FPS KIT/HFPS Assets/Content/Scenes/Main Scenes/Showcase.unity
@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/World.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/ThankYou.unity
+    guid: 287b0ed4a91afc548b29f23819a26c78
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 879dc59d21f31734c95279731f769bef,
       type: 2}
