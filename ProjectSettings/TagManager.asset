@@ -9,6 +9,8 @@ TagManager:
   - Zombie
   - Wood
   - Tree
+  - Metal
+  - Boat
   layers:
   - Default
   - TransparentFX
