@@ -54,7 +54,7 @@ namespace HFPS.Player
         {
             if (InputHandler.InputIsInitialized)
             {
-                UseKey = InputHandler.ReadButton("Use");
+                //UseKey = InputHandler.ReadButton("Use");
 
                 if (InputHandler.CurrentDevice == InputHandler.Device.MouseKeyboard)
                 {

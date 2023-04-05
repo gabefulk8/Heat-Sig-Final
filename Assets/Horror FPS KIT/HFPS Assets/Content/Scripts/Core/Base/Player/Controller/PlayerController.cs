@@ -354,7 +354,7 @@ namespace HFPS.Player
             if (InputHandler.InputIsInitialized && !isPauseMenu)
             {
                 inputDevice = InputHandler.CurrentDevice;
-                ZoomPressed = InputHandler.ReadButton("Zoom");
+                //ZoomPressed = InputHandler.ReadButton("Zoom");
 
                 if (controllerFeatures.enableJump)
                 {
@@ -401,7 +401,7 @@ namespace HFPS.Player
                     }
                 }
 
-                if (!InputHandler.IsCompositesSame("Crouch", "Prone"))
+                /*if (!InputHandler.IsCompositesSame("Crouch", "Prone"))
                 {
                     CrouchPressed = InputHandler.ReadButtonOnce(this, "Crouch");
                     PronePressed = InputHandler.ReadButtonOnce(this, "Prone");
@@ -438,7 +438,7 @@ namespace HFPS.Player
                             inProne = false;
                         }
                     }
-                }
+                }*/
 
                 if (isControllable)
                 {

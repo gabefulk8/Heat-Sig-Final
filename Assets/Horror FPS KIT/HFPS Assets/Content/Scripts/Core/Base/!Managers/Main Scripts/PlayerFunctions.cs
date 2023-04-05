@@ -67,7 +67,7 @@ namespace HFPS.Player
         {
             if (InputHandler.InputIsInitialized)
             {
-                if (InputHandler.IsActionExist("LeanLeft"))
+                /*if (InputHandler.IsActionExist("LeanLeft"))
                 {
                     LeanLeft = InputHandler.ReadButton("LeanLeft");
                 }
@@ -77,7 +77,7 @@ namespace HFPS.Player
                     LeanRight = InputHandler.ReadButton("LeanRight");
                 }
 
-                ZoomKey = InputHandler.ReadButton("Zoom");
+                ZoomKey = InputHandler.ReadButton("Zoom"); */
             }
 
             LeanUpdate();

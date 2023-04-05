@@ -232,13 +232,13 @@ namespace HFPS.Systems
         void SetupUIControls()
         {
             InputHandler.GetInputAction("Pause").performed += OnPause;
-            InputHandler.GetInputAction("Inventory").performed += OnInventory;
+            //InputHandler.GetInputAction("Inventory").performed += OnInventory;
         }
 
         void OnDestroy()
         {
             InputHandler.GetInputAction("Pause").performed -= OnPause;
-            InputHandler.GetInputAction("Inventory").performed -= OnInventory;
+            //InputHandler.GetInputAction("Inventory").performed -= OnInventory;
             InputHandler.OnInputsUpdated -= OnInputsUpdated;
             colorGrading.saturation.Override(0);
         }
@@ -266,11 +266,11 @@ namespace HFPS.Systems
                 }
             }
 
-            bindPath_Use = InputHandler.CompositeOf("Use").GetBindingPath();
+            /*bindPath_Use = InputHandler.CompositeOf("Use").GetBindingPath();
             bindPath_Grab = InputHandler.CompositeOf("Examine").GetBindingPath();
             bindPath_Throw = InputHandler.CompositeOf("Zoom").GetBindingPath();
             bindPath_Rotate = InputHandler.CompositeOf("Fire").GetBindingPath();
-            bindPath_Cursor = InputHandler.CompositeOf("Zoom").GetBindingPath();
+            bindPath_Cursor = InputHandler.CompositeOf("Zoom").GetBindingPath(); */
         }
 
         private void OnInitTexts()

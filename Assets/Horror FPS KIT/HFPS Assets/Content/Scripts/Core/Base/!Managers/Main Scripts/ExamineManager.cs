@@ -214,18 +214,18 @@ namespace HFPS.Player
             {
                 device = InputHandler.CurrentDevice;
 
-                bp_Use = InputHandler.CompositeOf("Use").GetBindingPath();
-                rotateKey = InputHandler.ReadButton("Fire");
-                selectKey = InputHandler.ReadButtonOnce(this, "Fire");
+                //bp_Use = InputHandler.CompositeOf("Use").GetBindingPath();
+                //rotateKey = InputHandler.ReadButton("Fire");
+                //selectKey = InputHandler.ReadButtonOnce(this, "Fire");
 
                 lookVector = InputHandler.ReadInput<Vector2>("Look", "PlayerExtra");
                 movementVector = InputHandler.ReadInput<Vector2>("Move");
 
                 if (objectRaycast || firstExamine)
                 {
-                    readTakeKey = InputHandler.ReadButtonOnce(this, "Use");
-                    examineKey = InputHandler.ReadButtonOnce(this, "Examine");
-                    cursorKey = InputHandler.ReadButtonOnce(this, "Zoom");
+                    //readTakeKey = InputHandler.ReadButtonOnce(this, "Use");
+                    //examineKey = InputHandler.ReadButtonOnce(this, "Examine");
+                    //cursorKey = InputHandler.ReadButtonOnce(this, "Zoom");
                 }
 
                 float currectSpeed = device.IsGamepadDevice() == 1 ? gamepadRotateSpeed : rotateSpeed;

@@ -175,7 +175,7 @@ namespace HFPS.Player
 
             if (InputHandler.InputIsInitialized && !inputWait)
             {
-                AttackKey = InputHandler.ReadButton("Fire");
+                //AttackKey = InputHandler.ReadButton("Fire");
             }
 
             if (Inventory.CheckItemInventory(MeleeItemID) && scriptManager.ScriptGlobalState && isSelected && !wallHit && !isBlocked && !isHideAnim)

@@ -284,10 +284,10 @@ namespace HFPS.Player
 
             if (InputHandler.InputIsInitialized && !inputWait)
             {
-                fireControl = InputHandler.ReadButton("Fire");
-                zoomControl = InputHandler.ReadButton("Zoom");
+                //fireControl = InputHandler.ReadButton("Fire");
+                //zoomControl = InputHandler.ReadButton("Zoom");
 
-                if (InputHandler.IsCompositesSame("Reload", "Examine"))
+                /*if (InputHandler.IsCompositesSame("Reload", "Examine"))
                 {
                     if (!scriptManager.IsExamineRaycast && !scriptManager.IsGrabRaycast)
                     {
@@ -308,7 +308,7 @@ namespace HFPS.Player
                 else
                 {
                     reloadControl = InputHandler.ReadButton("Reload");
-                }
+                } */
             }
 
             if (inventory)

@@ -115,9 +115,9 @@ namespace HFPS.Player
         {
             if (InputHandler.InputIsInitialized)
             {
-                bp_Use = InputHandler.CompositeOf("Use").GetBindingPath();
-                bp_Pickup = InputHandler.CompositeOf("Examine").GetBindingPath();
-                UsePressed = InputHandler.ReadButtonOnce(this, "Use");
+                //bp_Use = InputHandler.CompositeOf("Use").GetBindingPath();
+                //bp_Pickup = InputHandler.CompositeOf("Examine").GetBindingPath();
+                //UsePressed = InputHandler.ReadButtonOnce(this, "Use");
             }
 
             if (UsePressed && RaycastObject && !isPressed && !isHeld && !inUse && !gameManager.isWeaponZooming)

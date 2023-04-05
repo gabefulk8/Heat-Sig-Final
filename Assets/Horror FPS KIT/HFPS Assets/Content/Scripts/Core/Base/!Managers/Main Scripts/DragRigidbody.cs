@@ -75,7 +75,7 @@ namespace HFPS.Player
 
         void OnEnable()
         {
-            InputHandler.GetInputAction("Zoom").canceled += OnZoom;
+            //InputHandler.GetInputAction("Zoom").canceled += OnZoom;
         }
 
         private void OnZoom(UnityEngine.InputSystem.InputAction.CallbackContext ctx)
@@ -108,9 +108,9 @@ namespace HFPS.Player
 
             if (InputHandler.InputIsInitialized && !gameManager.isPaused && !gameManager.isInventoryShown)
             {
-                RotateButton = InputHandler.ReadButton("Fire");
+                //RotateButton = InputHandler.ReadButton("Fire");
 
-                if (objectRaycast && !antiSpam && !gameManager.isWeaponZooming)
+                /*if (objectRaycast && !antiSpam && !gameManager.isWeaponZooming)
                 {
                     if (InputHandler.ReadButtonOnce(this, "Examine"))
                     {
@@ -121,7 +121,7 @@ namespace HFPS.Player
                 if (InputHandler.ReadButtonOnce(this, "Zoom") && objectHeld)
                 {
                     ThrowObject();
-                }
+                }*/
 
                 Vector2 delta = InputHandler.ReadInput<Vector2>("Look", "PlayerExtra");
                 rotateValue.x = Mathf.Abs(delta.x) > rotationDeadzone ? delta.x * rotateSpeed * -1 : 0;

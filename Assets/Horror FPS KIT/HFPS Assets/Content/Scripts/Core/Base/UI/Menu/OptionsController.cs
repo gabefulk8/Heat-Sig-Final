@@ -428,6 +428,8 @@ namespace HFPS.Systems
                     value_attr.Value = value;
                     sectionElement.Attributes.Append(value_attr);
                     sectionRoot.AppendChild(sectionElement);
+
+                    Debug.Log(entry.Instance.name);
                 }
 
                 if(!skip) rootNode.AppendChild(sectionRoot);
