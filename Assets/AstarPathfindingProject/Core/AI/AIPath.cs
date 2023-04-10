@@ -85,7 +85,7 @@ namespace Pathfinding {
 		public float rotationSpeed = 360;
 
 		/// <summary>Distance from the end of the path where the AI will start to slow down</summary>
-		public float slowdownDistance = 0.0F;
+		public float slowdownDistance = 0.6F;
 
 		/// <summary>
 		/// How far the AI looks ahead along the path to determine the point it moves to.
