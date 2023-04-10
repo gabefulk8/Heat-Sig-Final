@@ -58,6 +58,42 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Play/Pause Log",
+                    "type": "Button",
+                    "id": "c6413768-a041-489b-8ab8-6c10984be058",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "NotRebindable",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Restart Log",
+                    "type": "Button",
+                    "id": "c2ce2f70-afcd-4fc4-bda4-31dd2e54e6bc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "NotRebindable",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Next Log",
+                    "type": "Button",
+                    "id": "04ae9f0c-903d-44ce-800e-e3fcf91ddc08",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "NotRebindable",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Previous Log",
+                    "type": "Button",
+                    "id": "f5a21c21-33a6-4540-b1a0-a6c31b4659c5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "NotRebindable",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -300,6 +336,50 @@
                     "processors": "",
                     "groups": "Xbox",
                     "action": "Switch to Drone",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fdcd6806-a1e2-4606-906d-d40681ac5a01",
+                    "path": "<Keyboard>/p",
+                    "interactions": "NotRebindable",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "Play/Pause Log",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "661be2bd-09f1-4c2f-ba96-b726089ed184",
+                    "path": "<Keyboard>/r",
+                    "interactions": "NotRebindable",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "Restart Log",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "82e53e2d-0b47-46ec-95f1-9bb100cba6eb",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "NotRebindable",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "Next Log",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "314ba9f7-7643-4775-a1d8-a4d35b4459df",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "NotRebindable",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "Previous Log",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -1,13 +1,13 @@
 <Settings>
   <General>
     <Option Name="input_controller" Value="0" />
-    <Option Name="game_volume" Value="0.43" />
+    <Option Name="game_volume" Value="0.27" />
     <Option Name="mouse_sensitivity" Value="2" />
     <Option Name="vertical_sensitivity" Value="2" />
     <Option Name="horizontal_sensitivity" Value="2" />
   </General>
   <Graphic>
-    <Option Name="game_resolution" Value="0" />
-    <Option Name="game_fullscreen" Value="2" />
+    <Option Name="game_resolution" Value="1" />
+    <Option Name="game_fullscreen" Value="1" />
   </Graphic>
 </Settings>

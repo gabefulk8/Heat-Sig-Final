@@ -384,7 +384,7 @@ public class GPS : MonoBehaviour, ISaveable
         //displays the logs if you have some
         if (noLogs == false)
         {
-            if (Input.GetKeyDown(KeyCode.N) && whatLog != 0)
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && whatLog != 0)
             {
                 makesurethesounddoesntplay = whatLog;
                 whatLog += -1;
@@ -401,7 +401,7 @@ public class GPS : MonoBehaviour, ISaveable
                     source2.time = 0;
                 }
             }
-            if (Input.GetKeyDown(KeyCode.M) && whatLog != 0)
+            if (Input.GetKeyDown(KeyCode.RightArrow) && whatLog != 0)
             {
                 makesurethesounddoesntplay = whatLog;
                 whatLog += 1;

@@ -408,6 +408,10 @@ namespace HFPS.Systems
                         break;
                     }
 
+                    if (entry.Instance == null) break;
+
+                    Debug.Log(entry.Instance.name);
+
                     string value = entry.Instance.GetValue().ToString();
 
                     if (entry.IsChanged)
@@ -428,8 +432,6 @@ namespace HFPS.Systems
                     value_attr.Value = value;
                     sectionElement.Attributes.Append(value_attr);
                     sectionRoot.AppendChild(sectionElement);
-
-                    Debug.Log(entry.Instance.name);
                 }
 
                 if(!skip) rootNode.AppendChild(sectionRoot);

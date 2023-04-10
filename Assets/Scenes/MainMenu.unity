@@ -3126,7 +3126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cfuStatus: PSXEffects v1.18.4 - version ahead?!
   sections: 01
-  customRes: {x: 806, y: 453}
+  customRes: {x: 607, y: 341}
   resolutionFactor: 2
   limitFramerate: -1
   skipFrames: 0
@@ -3298,7 +3298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cfuStatus: PSXEffects v1.18.4 - version ahead?!
   sections: 01000100
-  customRes: {x: 100, y: 56}
+  customRes: {x: 164, y: 92}
   resolutionFactor: 5
   limitFramerate: -1
   skipFrames: 0
@@ -3972,7 +3972,7 @@ PrefabInstance:
     - target: {fileID: 6278561042711762158, guid: e274edc91acbb9d42a96268a7312de7c,
         type: 3}
       propertyPath: NewGameBuildName
-      value: World
+      value: Heat Signature
       objectReference: {fileID: 0}
     - target: {fileID: 6278561043218115975, guid: e274edc91acbb9d42a96268a7312de7c,
         type: 3}

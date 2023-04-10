@@ -32,4 +32,16 @@
     <Binding Index="1" Bind="DualShockGamepad.start" />
     <Binding Index="2" Bind="XInputController.select" />
   </Action>
+  <Action Name="Play/Pause Log">
+    <Binding Index="0" Bind="Keyboard.p" />
+  </Action>
+  <Action Name="Restart Log">
+    <Binding Index="0" Bind="Keyboard.r" />
+  </Action>
+  <Action Name="Next Log">
+    <Binding Index="0" Bind="Keyboard.rightArrow" />
+  </Action>
+  <Action Name="Previous Log">
+    <Binding Index="0" Bind="Keyboard.leftArrow" />
+  </Action>
 </InputScheme>
