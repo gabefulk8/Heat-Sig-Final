@@ -25,29 +25,17 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorBlend:
-<<<<<<< Updated upstream
         m_Texture: {fileID: -8059468216256648267, guid: e6a28bccffa2a2b4182757e7afdd0a8c,
-=======
-        m_Texture: {fileID: -2426258938373807642, guid: e6a28bccffa2a2b4182757e7afdd0a8c,
->>>>>>> Stashed changes
           type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorByHeight:
-<<<<<<< Updated upstream
         m_Texture: {fileID: -8401224993803070173, guid: e6a28bccffa2a2b4182757e7afdd0a8c,
-=======
-        m_Texture: {fileID: -2808204656665410835, guid: e6a28bccffa2a2b4182757e7afdd0a8c,
->>>>>>> Stashed changes
           type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorByNormal:
-<<<<<<< Updated upstream
         m_Texture: {fileID: -4167916681784936172, guid: e6a28bccffa2a2b4182757e7afdd0a8c,
-=======
-        m_Texture: {fileID: -6630179922915804788, guid: e6a28bccffa2a2b4182757e7afdd0a8c,
->>>>>>> Stashed changes
           type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}

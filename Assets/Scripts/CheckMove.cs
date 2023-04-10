@@ -13,54 +13,25 @@ public class CheckMove : MonoBehaviour
 
     public Transform target;
 
-    public float speed = 3f;
-
-    private Vector3 previousPosition;
-    private float elapsedTime;
 
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
-
-        previousPosition = transform.position;
-        elapsedTime = 0f;
-
     }
 
 
     void Update()
     {
-        elapsedTime += Time.deltaTime;
-        Vector3 currentPosition = transform.position;
-        Vector3 displacement = currentPosition - previousPosition;
-        float velocity = displacement.magnitude / elapsedTime;
-        Debug.Log("Velocity: " + velocity);
 
-        if (velocity > speed)
-            {
-                animator.SetBool("IsMoving", true);
-
-            }
-            else
-
-            {
-                animator.SetBool("IsMoving", false);
-
-                previousPosition = currentPosition;
-                elapsedTime = 0f;
-            }
-
-
-
-
-       // if (Vector3.Distance(transform.position, box.position) > 3)
-      //  {
-      //      animator.SetBool("IsMoving", true);
-      //  }
-      //  else
-       // {
-       //     animator.SetBool("IsMoving", false);
-       // }
+        if (transform.hasChanged)
+        {
+            animator.SetBool("IsMoving", true);
+            transform.hasChanged = false;
+        }
+        else
+        {
+            animator.SetBool("IsMoving", false);
+        }
 
 
         if (Vector3.Distance(transform.position, target.position) < 24)
