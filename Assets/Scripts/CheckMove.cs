@@ -34,20 +34,20 @@ public class CheckMove : MonoBehaviour
         }
 
 
-        if (Vector3.Distance(transform.position, target.position) < 24)
+        if (Vector3.Distance(transform.position, target.position) < 25)
         {
             animator.SetBool("IsChase", true);
-            GetComponent<Pathfinding.AIPath>().SetSpeed(11);
+            GetComponent<Pathfinding.AIPath>().SetSpeed(13);
         }
 
 
 
-        if (Vector3.Distance(transform.position, target.position) < 5)
+        if (Vector3.Distance(transform.position, target.position) < 4)
         {
             animator.SetBool("IsAttack", true);
         }
 
-        if (Vector3.Distance(transform.position, target.position) > 5)
+        if (Vector3.Distance(transform.position, target.position) > 4)
         {
             animator.SetBool("IsAttack", false);
         }
