@@ -7,7 +7,7 @@ public class LookDrone : MonoBehaviour
 
 	Vector2 rotation = Vector2.zero;
 	public float speed = 3; //the sensibility
-	public float maxAngle = 320;
+	public float maxAngle = 80;
 
 	void Update()
 	{

@@ -11,6 +11,7 @@ TagManager:
   - Tree
   - Metal
   - Boat
+  - Death
   layers:
   - Default
   - TransparentFX

@@ -29,6 +29,9 @@ public class DroneSwap : MonoBehaviour
     public AudioSource droneAudio;
     public AudioSource playerAudio;
 
+    public MonoBehaviour scriptToDisable;
+    public AudioClip deathSoundEffect;
+    public AudioSource[] audioSourcesToDisable;
 
     void Start()
     {
@@ -109,4 +112,19 @@ public class DroneSwap : MonoBehaviour
         cabinLampRenderer.sharedMaterial = guidanceMats[2];
         FloodThermals.SetActive(false);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Death"))
+        {
+            scriptToDisable.enabled = false;
+            AudioSource.PlayClipAtPoint(deathSoundEffect, transform.position);
+
+            foreach (var audioSource in audioSourcesToDisable)
+            {
+                audioSource.enabled = false;
+            }
+        }
+    }
+
 }
