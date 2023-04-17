@@ -37,7 +37,7 @@ public class CheckMove : MonoBehaviour
         if (Vector3.Distance(transform.position, target.position) < 25)
         {
             animator.SetBool("IsChase", true);
-            GetComponent<Pathfinding.AIPath>().SetSpeed(13);
+            GetComponent<Pathfinding.AIPath>().SetSpeed(15);
         }
 
 
