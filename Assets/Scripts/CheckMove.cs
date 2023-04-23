@@ -7,7 +7,6 @@ public class CheckMove : MonoBehaviour
     private Animator animator;
     private AudioSource audioSource;
 
-
     const string WALK = "Walk"; // ChangeAnimationState(WALK);
     const string IDLE = "Idle"; // ChangeAnimationState(IDLE);
     const string RUN = "Attack"; // ChangeAnimationState(RUN);
@@ -15,9 +14,11 @@ public class CheckMove : MonoBehaviour
 
     public Transform target;
 
-    public AudioClip[] footstepSounds; 
+    public AudioClip[] footstepSounds;
+    public AudioClip[] runningFootstepSounds;
     public float footstepInterval = 0.5f; 
     private float footstepTimer;
+
 
     void Start()
     {
@@ -46,15 +47,23 @@ public class CheckMove : MonoBehaviour
             if (footstepTimer <= 0f)
             {
                 footstepTimer = footstepInterval;
-                PlayFootstepSound();
+                if (!animator.GetBool("IsChase"))
+                {
+                    PlayFootstepSound();
+                }
+                else if (!audioSource.isPlaying)
+                {
+                    PlayRunningFootstepSound();
+                }
             }
         }
+
 
 
         if (Vector3.Distance(transform.position, target.position) < 25)
         {
             animator.SetBool("IsChase", true);
-            GetComponent<Pathfinding.AIPath>().SetSpeed(15);
+            GetComponent<Pathfinding.AIPath>().SetSpeed(16);
         }
 
 
@@ -72,12 +81,23 @@ public class CheckMove : MonoBehaviour
 
     void PlayFootstepSound()
     {
-        if (footstepSounds.Length > 0)
+        if (footstepSounds.Length > 0 && !audioSource.isPlaying)
         {
             int index = Random.Range(0, footstepSounds.Length);
             audioSource.PlayOneShot(footstepSounds[index], 10f);
         }
     }
+
+    void PlayRunningFootstepSound()
+    {
+        if (runningFootstepSounds.Length > 0 && !audioSource.isPlaying)
+        {
+            int index = Random.Range(0, runningFootstepSounds.Length);
+            audioSource.PlayOneShot(runningFootstepSounds[index], 10f);
+        }
+    }
+
+
 
 
     void ChangeAnimationState(string newState)

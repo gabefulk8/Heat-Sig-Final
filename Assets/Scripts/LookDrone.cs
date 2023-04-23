@@ -16,4 +16,5 @@ public class LookDrone : MonoBehaviour
 		rotation.x = Mathf.Clamp(rotation.x, -maxAngle, maxAngle);
 		transform.eulerAngles = (Vector2)rotation * speed;
 	}
+
 }

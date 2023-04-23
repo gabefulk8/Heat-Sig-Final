@@ -32,7 +32,7 @@ MonoBehaviour:
       radius: 0.59
       height: 4.3822403
       direction: 1
-    pivotOffset: 0
+    pivotOffset: -0.3
     baseRotation: {x: 0, y: 0, z: 0, w: 1}
     baseScale: {x: 4, y: 4, z: 4}
     editor_PrefabAssetPath: Assets/1Trees/New/tree05_winter.prefab
@@ -54,7 +54,7 @@ MonoBehaviour:
       radius: 0.59
       height: 4.5751343
       direction: 1
-    pivotOffset: 0
+    pivotOffset: -0.2
     baseRotation: {x: 0, y: 0, z: 0, w: 1}
     baseScale: {x: 2.5, y: 2.5, z: 2.5}
     editor_PrefabAssetPath: Assets/1Trees/New/tree03_winter.prefab
@@ -77,7 +77,7 @@ MonoBehaviour:
       radius: 0.59
       height: 4.0898743
       direction: 1
-    pivotOffset: -0.12
+    pivotOffset: -0.28
     baseRotation: {x: 0, y: 0, z: 0, w: 1}
     baseScale: {x: 3, y: 3, z: 3}
     editor_PrefabAssetPath: Assets/1Trees/New/tree02_winter.prefab
@@ -123,7 +123,7 @@ MonoBehaviour:
       radius: 0.59
       height: 5.280655
       direction: 1
-    pivotOffset: 0
+    pivotOffset: -0.01
     baseRotation: {x: 0, y: 0, z: 0, w: 1}
     baseScale: {x: 4, y: 3, z: 4}
     editor_PrefabAssetPath: Assets/1Trees/New/tree08.prefab
@@ -168,7 +168,7 @@ MonoBehaviour:
       radius: 0.59
       height: 3.9827042
       direction: 1
-    pivotOffset: 0
+    pivotOffset: -0.07
     baseRotation: {x: 0, y: 0, z: 0, w: 1}
     baseScale: {x: 3, y: 3, z: 3}
     editor_PrefabAssetPath: Assets/1Trees/New/tree01_winter.prefab
@@ -195,3 +195,391 @@ MonoBehaviour:
     baseRotation: {x: 0, y: 0, z: 0, w: 1}
     baseScale: {x: 1.5, y: 1.5, z: 1.5}
     editor_PrefabAssetPath: Assets/1Trees/New/Snowy_PineTree.prefab
+  - prefab: {fileID: 1908466823853080485, guid: 1ae7c746cc05f844fa0ce395e0bc6e0d,
+      type: 3}
+    sharedMesh: {fileID: -2432090755550338912, guid: c49c883cc18f46541af393c24fb169fe,
+      type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: 540ec459b0a1a6c40a229930018d59cf, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: 0
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/1Trees/NewBush/bush01_winter.prefab
+  - prefab: {fileID: 4554699738454001138, guid: c61708fae7c9fe24ba28d2ce9d89aacd,
+      type: 3}
+    sharedMesh: {fileID: -2432090755550338912, guid: 7627868282ec10a4fba186217b9b4892,
+      type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: 6a9af9ecdaa0f604a8638e075549bdb3, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: 0
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/1Trees/NewBush/bush02_winter.prefab
+  - prefab: {fileID: 8152211968617347783, guid: 81699e95aff9bb44087e69c302ced7ec,
+      type: 3}
+    sharedMesh: {fileID: -2432090755550338912, guid: 202888281ad45434cb7878bffa9214a4,
+      type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: e880cde80a117034792c4766c95acf47, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: -0.272
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/1Trees/NewBush/bush03_winter.prefab
+  - prefab: {fileID: 6848049330387691880, guid: d8d53c2bbb61e6448956536bc16aa47c,
+      type: 3}
+    sharedMesh: {fileID: -2432090755550338912, guid: e0327978f09f7ab49b75de90096ab690,
+      type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: 32acfd6c156fc7246b1bcf441788075e, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: -0.242
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/1Trees/NewBush/bush04_winter.prefab
+  - prefab: {fileID: 4243391030829288036, guid: bf5acf01fcdaab0449835c3fa2ff059f,
+      type: 3}
+    sharedMesh: {fileID: -2432090755550338912, guid: fcffce7af5112234fbe02da4a413ddc8,
+      type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: 02af6b95944d95f448d90f8525e6c023, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: -0.204
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/1Trees/NewBush/bush05_winter.prefab
+  - prefab: {fileID: 1101607538072024236, guid: c42fe15181d74ce43a7e9d412627828b,
+      type: 3}
+    sharedMesh: {fileID: -2432090755550338912, guid: 1be43b4ed753d6b41b2001dbecab6ea4,
+      type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: 1e22445139c1e2745b1385b1dc257af1, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: -0.234
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/1Trees/NewBush/bush06_winter.prefab
+  - prefab: {fileID: 4854931508943911366, guid: 292be4b52c4fa574eac6a921b35185a0,
+      type: 3}
+    sharedMesh: {fileID: -2432090755550338912, guid: 07cf7f7dda941774a9988d2abf11f313,
+      type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: fcf5ba46be3c6084b909deb60c47a4ad, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: -0.31
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/1Trees/Grass/grass01.prefab
+  - prefab: {fileID: 3235195804690354650, guid: ace226e0836c15b46b35298346568da1,
+      type: 3}
+    sharedMesh: {fileID: -2432090755550338912, guid: a73f601428dff804988ac5e4e98d7c0e,
+      type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: fcf5ba46be3c6084b909deb60c47a4ad, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: -0.113
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/1Trees/Grass/grass02.prefab
+  - prefab: {fileID: 5199472155213049771, guid: b0c96ad7eb7002144b8031fe05fbfda6,
+      type: 3}
+    sharedMesh: {fileID: -2432090755550338912, guid: 4c45fe0b91eda8d4d84dc288ff27d1a9,
+      type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: fcf5ba46be3c6084b909deb60c47a4ad, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: -0.31
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/1Trees/Grass/grass03.prefab
+  - prefab: {fileID: 4815695003812955001, guid: 2529f875d97982549b53aeba19415ed0,
+      type: 3}
+    sharedMesh: {fileID: -2432090755550338912, guid: 65a9b8461832f274a87279241c8a2130,
+      type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: fcf5ba46be3c6084b909deb60c47a4ad, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: -0.159
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/1Trees/Grass/grass05.prefab
+  - prefab: {fileID: 8140551229009507545, guid: f366cc2f4c35d234a830138591bc3289,
+      type: 3}
+    sharedMesh: {fileID: -2432090755550338912, guid: 441ab7e92b29cc24d8721ab5db4c02cb,
+      type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: fcf5ba46be3c6084b909deb60c47a4ad, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: -0.189
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/1Trees/Grass/grass04.prefab
+  - prefab: {fileID: 3171672539670613617, guid: 2119a241cd098af45b15b6b45048b546,
+      type: 3}
+    sharedMesh: {fileID: -2432090755550338912, guid: 2722f72d862564b42be5dd69ac28aa6a,
+      type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: fcf5ba46be3c6084b909deb60c47a4ad, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: -0.197
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/1Trees/Grass/grass06.prefab
+  - prefab: {fileID: 4462171496254761319, guid: 003f339aa683957488f28a5d12efe046,
+      type: 3}
+    sharedMesh: {fileID: -2432090755550338912, guid: c95f4d38f5ce02846a2de730b09ccdde,
+      type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: fcf5ba46be3c6084b909deb60c47a4ad, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: -0.247
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/1Trees/Grass/grass07.prefab
+  - prefab: {fileID: 750299027459363597, guid: 3250d403aed502b4cb30d5f4dbf513b7, type: 3}
+    sharedMesh: {fileID: -2432090755550338912, guid: 366b9279a90f6cc47b7674252a5233ea,
+      type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: fcf5ba46be3c6084b909deb60c47a4ad, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: -0.27
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/1Trees/Grass/grass08.prefab
+  - prefab: {fileID: 3067401364799343278, guid: 4d87f2fedb6c2ae44a468b3b232e57b9,
+      type: 3}
+    sharedMesh: {fileID: -2432090755550338912, guid: efeff6dbf7ea6584784b48cf55ade5aa,
+      type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: fcf5ba46be3c6084b909deb60c47a4ad, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: -0.166
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/1Trees/Grass/grass09.prefab
+  - prefab: {fileID: 2774220344640892715, guid: fcaa2079aa2d9534288c404ff0f74562,
+      type: 3}
+    sharedMesh: {fileID: -2432090755550338912, guid: 64545b90892ac8746a2fdc77f73a36f6,
+      type: 3}
+    sharedMaterials:
+    - {fileID: 2100000, guid: 67bfdc2ce4b3489468d3b517982812c4, type: 2}
+    shadowCastingMode: 1
+    receiveShadow: 1
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: 0
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/1Trees/Grass/grass_bush.prefab
+  - prefab: {fileID: 2085479234857099132, guid: 0b181049d98f6c4449b2500c209ebc02,
+      type: 3}
+    sharedMesh: {fileID: 0}
+    sharedMaterials: []
+    shadowCastingMode: 0
+    receiveShadow: 0
+    billboardShadowCastingMode: 0
+    billboardReceiveShadow: 0
+    layer: 0
+    keepPrefabLayer: 0
+    billboard: {fileID: 0}
+    hasCollider: 0
+    colliderInfo:
+      center: {x: 0, y: 0, z: 0}
+      radius: 0
+      height: 0
+      direction: 0
+    pivotOffset: 0
+    baseRotation: {x: 0, y: 0, z: 0, w: 1}
+    baseScale: {x: 1, y: 1, z: 1}
+    editor_PrefabAssetPath: Assets/1Trees/Grass/grass_patch.prefab

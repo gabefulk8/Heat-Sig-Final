@@ -12,7 +12,21 @@ public class DroneSwap : MonoBehaviour
     public GameObject mouseScript;
 
     public Material[] materials;    //different materials for the monster. 0 is default, 1 is thermal
-    public Renderer rend;       //renderer on the monster
+
+    public Renderer rend;       //these rends are each monster in the game ok sorry
+    public Renderer rend2;
+    public Renderer rend3;
+    public Renderer rend4;
+    public Renderer rend5;
+    public Renderer rend6;
+    public Renderer rend7;
+    public Renderer rend8;
+    public Renderer rend9;
+    public Renderer rend10;
+    public Renderer rend11;
+    public Renderer rend12;
+    public Renderer rend13;
+
     public Renderer quarryFlareRenderer;
     public Renderer cabinLampRenderer;
     public Renderer towerLampRenderer;
@@ -94,6 +108,18 @@ public class DroneSwap : MonoBehaviour
     public void ThermalsON()
     {
         rend.sharedMaterial = materials[1];
+        rend2.sharedMaterial = materials[1];
+        rend3.sharedMaterial = materials[1];
+        rend4.sharedMaterial = materials[1];
+        rend5.sharedMaterial = materials[1];
+        rend6.sharedMaterial = materials[1];
+        rend7.sharedMaterial = materials[1];
+        rend8.sharedMaterial = materials[1];
+        rend9.sharedMaterial = materials[1];
+        rend10.sharedMaterial = materials[1];
+        rend11.sharedMaterial = materials[1];
+        rend12.sharedMaterial = materials[1];
+        rend13.sharedMaterial = materials[1];
         quarryFlareRenderer.sharedMaterial = guidanceMats[0];
         campLampRenderer.sharedMaterial = guidanceMats[0];
         towerLampRenderer.sharedMaterial = guidanceMats[0];
@@ -105,6 +131,18 @@ public class DroneSwap : MonoBehaviour
     public void ThermalsOFF()
     {
         rend.sharedMaterial = materials[0]; //default monster material
+        rend2.sharedMaterial = materials[0];
+        rend3.sharedMaterial = materials[0];
+        rend4.sharedMaterial = materials[0];
+        rend5.sharedMaterial = materials[0];
+        rend6.sharedMaterial = materials[0];
+        rend7.sharedMaterial = materials[0];
+        rend8.sharedMaterial = materials[0];
+        rend9.sharedMaterial = materials[0];
+        rend10.sharedMaterial = materials[0];
+        rend11.sharedMaterial = materials[0];
+        rend12.sharedMaterial = materials[0];
+        rend13.sharedMaterial = materials[0];
         quarryFlareRenderer.sharedMaterial = guidanceMats[1];
         campLampRenderer.sharedMaterial = guidanceMats[2];
         towerLampRenderer.sharedMaterial = guidanceMats[2];
@@ -112,6 +150,8 @@ public class DroneSwap : MonoBehaviour
         cabinLampRenderer.sharedMaterial = guidanceMats[2];
         FloodThermals.SetActive(false);
     }
+
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -126,5 +166,5 @@ public class DroneSwap : MonoBehaviour
             }
         }
     }
-
+    
 }
