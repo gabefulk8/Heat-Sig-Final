@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3578212177336127710}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: bush05_winter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 4168197139397468550}
   - component: {fileID: 1229278646736771276}
   - component: {fileID: 2317942359873354840}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}

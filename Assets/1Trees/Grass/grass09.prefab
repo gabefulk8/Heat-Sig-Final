@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2439343402628255764}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: grass09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3002350451893248332}
   - component: {fileID: 107332711998724102}
   - component: {fileID: 3483790126429355154}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
