@@ -47,6 +47,8 @@ public class DroneSwap : MonoBehaviour
     public AudioClip deathSoundEffect;
     public AudioSource[] audioSourcesToDisable;
 
+    public float switchDistance = 7f;
+
     void Start()
     {
         charCont = this.GetComponent<CharacterController>();
@@ -67,9 +69,22 @@ public class DroneSwap : MonoBehaviour
             ToMain();
             camState = 0;
         }
+
+        GameObject[] deathObjects = GameObject.FindGameObjectsWithTag("Death");
+        foreach (GameObject deathObject in deathObjects)
+        {
+            float distance = Vector3.Distance(deathObject.transform.position, transform.position);
+            if (distance <= switchDistance)
+            {
+                droneCam.SetActive(false);
+                mainCam.SetActive(true);
+                ToMain();
+            }
+        }
+
     }
 
-    void ToMain()
+    public void ToMain()
     {
         //enable movement, swap to main camera
         droneAudio.Stop();
@@ -87,7 +102,7 @@ public class DroneSwap : MonoBehaviour
         mouseScript.SetActive(true);
     }
 
-    void ToDrone()
+    public void ToDrone()
     {
         //disable movement, swap to drone camera
         droneAudio.PlayOneShot(toDrone);

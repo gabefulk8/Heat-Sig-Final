@@ -12,6 +12,7 @@ TagManager:
   - Metal
   - Boat
   - Death
+  - Drone
   layers:
   - Default
   - TransparentFX

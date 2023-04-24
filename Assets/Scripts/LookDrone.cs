@@ -9,6 +9,9 @@ public class LookDrone : MonoBehaviour
 	public float speed = 3; //the sensibility
 	public float maxAngle = 80;
 
+
+
+
 	void Update()
 	{
 		rotation.y += Input.GetAxis("Mouse X");
@@ -16,5 +19,8 @@ public class LookDrone : MonoBehaviour
 		rotation.x = Mathf.Clamp(rotation.x, -maxAngle, maxAngle);
 		transform.eulerAngles = (Vector2)rotation * speed;
 	}
+
+
+
 
 }
