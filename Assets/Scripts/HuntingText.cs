@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class HuntingText : MonoBehaviour
 {
@@ -35,3 +36,4 @@ public class HuntingText : MonoBehaviour
         uiElement.SetActive(false);
     }
 }
+

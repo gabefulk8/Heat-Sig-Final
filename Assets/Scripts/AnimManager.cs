@@ -141,7 +141,7 @@ public class AnimManager : MonoBehaviour
         RenderSettings.fogColor = Color.white;
         GetComponent<GPS>().CabinScanned = true;
         patrols.SetActive(true);
-
+        huntText.SetActive(true);
         Invoke("ToMainCam", 7f);
     }
 
@@ -179,7 +179,7 @@ public class AnimManager : MonoBehaviour
         RenderSettings.fogColor = Color.white;
         GetComponent<GPS>().BoatScanned = true;
         patrols.SetActive(true);
-
+        huntText.SetActive(true);
         Invoke("ToMainCam", 7f);
     }
 
@@ -198,7 +198,7 @@ public class AnimManager : MonoBehaviour
         RenderSettings.fogColor = Color.white;
         GetComponent<GPS>().CampScanned = true;
         patrols.SetActive(true);
-
+        huntText.SetActive(true);
         Invoke("ToMainCam", 7f);
     }
 

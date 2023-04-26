@@ -12,7 +12,7 @@ public class Footsteps : MonoBehaviour
     public AudioClip[] feetBoat;
     public AudioClip[] feetWood;
 
-    private float footstepTimer = 0.42f;
+    private float footstepTimer = 0.6f;
 
     void Update()
     {
@@ -50,7 +50,7 @@ public class Footsteps : MonoBehaviour
                     }
                 }
 
-                footstepTimer = 0.5f;
+                footstepTimer = 0.6f;
             }
         }
     }
