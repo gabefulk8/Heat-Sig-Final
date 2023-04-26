@@ -39,6 +39,13 @@ public class AnimManager : MonoBehaviour
 
     public AudioSource playerAudio;
 
+    //Monster Babies Patrols
+    public GameObject patrols;
+
+    public AudioClip huntaudio;
+
+    public GameObject huntText;
+
     void Update()
     {
         if (minePlayed == false && Vector3.Distance(this.transform.position, mineFlare.transform.position) < 3) //Mine Animation Trigger
@@ -133,6 +140,8 @@ public class AnimManager : MonoBehaviour
         GetComponent<GPS>().locations[2].text = "<s>-791, 90<s>";
         RenderSettings.fogColor = Color.white;
         GetComponent<GPS>().CabinScanned = true;
+        patrols.SetActive(true);
+
         Invoke("ToMainCam", 7f);
     }
 
@@ -150,6 +159,8 @@ public class AnimManager : MonoBehaviour
         GetComponent<GPS>().locations[1].text = "<s>819, -546<s>";
         RenderSettings.fogColor = Color.white;
         GetComponent<GPS>().RangerScanned = true;
+        patrols.SetActive(true);
+        huntText.SetActive(true);
         Invoke("ToMainCam", 7f);
     }
 
@@ -167,6 +178,8 @@ public class AnimManager : MonoBehaviour
         GetComponent<GPS>().locations[3].text = "<s>-857, -285<s>";
         RenderSettings.fogColor = Color.white;
         GetComponent<GPS>().BoatScanned = true;
+        patrols.SetActive(true);
+
         Invoke("ToMainCam", 7f);
     }
 
@@ -184,6 +197,8 @@ public class AnimManager : MonoBehaviour
         GetComponent<GPS>().locations[4].text = "<s>1694, -436<s>";
         RenderSettings.fogColor = Color.white;
         GetComponent<GPS>().CampScanned = true;
+        patrols.SetActive(true);
+
         Invoke("ToMainCam", 7f);
     }
 

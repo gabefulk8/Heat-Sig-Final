@@ -287,7 +287,6 @@ public class GPS : MonoBehaviour, ISaveable
                     source1.PlayOneShot(paperClose);
                 }
                 if (items[1].transform.localPosition.y < -0.2) items[1].transform.localPosition += new Vector3(0, 0.05f, 0);
-                map();
                 break;
             //Tape Recorder
             case 3:
