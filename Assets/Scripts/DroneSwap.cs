@@ -178,6 +178,7 @@ public class DroneSwap : MonoBehaviour
             foreach (var audioSource in audioSourcesToDisable)
             {
                 audioSource.enabled = false;
+                audioSource.volume = 0.2f; 
             }
         }
     }

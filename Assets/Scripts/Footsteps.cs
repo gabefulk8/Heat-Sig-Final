@@ -12,6 +12,7 @@ public class Footsteps : MonoBehaviour
     public AudioClip[] feetBoat;
     public AudioClip[] feetWood;
 
+    public float footstepsVolume = 0.3f;
     private float footstepTimer = 0.6f;
 
     void Update()
@@ -37,15 +38,15 @@ public class Footsteps : MonoBehaviour
                             break;
                         case "Boat":
                             clip = feetBoat[Random.Range(0, feetBoat.Length - 1)];
-                            source.PlayOneShot(clip);
+                            source.PlayOneShot(clip, footstepsVolume);
                             break;
                         case "Wood":
                             clip = feetWood[Random.Range(0, feetWood.Length - 1)];
-                            source.PlayOneShot(clip);
+                            source.PlayOneShot(clip, footstepsVolume);
                             break;
                         default:
                             clip = feetSnow[Random.Range(0, feetSnow.Length)];
-                            source.PlayOneShot(clip);
+                            source.PlayOneShot(clip, footstepsVolume);
                             break;
                     }
                 }
