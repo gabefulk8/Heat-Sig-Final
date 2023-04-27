@@ -7,6 +7,7 @@ public class IntroDialogueManager : MonoBehaviour
 {
     public GameObject player;
     public AudioClip IntroDialogue;
+    public AudioSource source;
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.root.GetComponent<PlayerController>() && player.GetComponent<GPS>().IntroPlayed == false)
@@ -18,7 +19,7 @@ public class IntroDialogueManager : MonoBehaviour
 
     public void PlayIntroDialogue()
     {
-        player.GetComponent<AudioSource>().PlayOneShot(IntroDialogue);
+        source.PlayOneShot(IntroDialogue);
         player.GetComponent<GPS>().IntroPlayed = true;
     }
 }
