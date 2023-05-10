@@ -520,7 +520,8 @@ public class GPS : MonoBehaviour, ISaveable
             { "HasBoatTape", GetComponent<GPS>().HasBoatTape },
             { "HasCampTape", GetComponent<GPS>().HasCampTape },
             { "HasHiddenTape", GetComponent<GPS>().HasHiddenTape },
-            { "HasBoltCutters", GetComponent<GPS>().HasBoltCutters }
+            { "HasBoltCutters", GetComponent<GPS>().HasBoltCutters },
+            { "PatrolStatus", GetComponent<AnimManager>().patrols.activeSelf }
         };
     }
 
@@ -599,6 +600,12 @@ public class GPS : MonoBehaviour, ISaveable
         if (HasBoltCutters == true)
         {
             boltCutters.SetActive(false);
+        }
+
+        if (token["PatrolStatus"].ToObject<bool>() == true)
+        {
+            GetComponent<AnimManager>().patrols.SetActive(token["PatrolStatus"].ToObject<bool>());
+            GetComponent<AnimManager>().huntText.SetActive(true);
         }
     }
 }
