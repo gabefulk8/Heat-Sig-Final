@@ -26,6 +26,13 @@ public class DroneSwap : MonoBehaviour
     public Renderer rend11;
     public Renderer rend12;
     public Renderer rend13;
+    public Renderer rend14;
+    public Renderer rend15;
+    public Renderer rend16;
+    public Renderer rend17;
+    public Renderer rend18;
+    public Renderer rend19;
+    public Renderer rend20;
 
     public Renderer quarryFlareRenderer;
     public Renderer cabinLampRenderer;
@@ -116,7 +123,7 @@ public class DroneSwap : MonoBehaviour
         charCont.enabled = false;
 
         ThermalsON();
-        
+
         mouseScript.SetActive(false);
     }
 
@@ -135,6 +142,13 @@ public class DroneSwap : MonoBehaviour
         rend11.sharedMaterial = materials[1];
         rend12.sharedMaterial = materials[1];
         rend13.sharedMaterial = materials[1];
+        rend14.sharedMaterial = materials[1];
+        rend15.sharedMaterial = materials[1];
+        rend16.sharedMaterial = materials[1];
+        rend17.sharedMaterial = materials[1];
+        rend18.sharedMaterial = materials[1];
+        rend19.sharedMaterial = materials[1];
+        rend20.sharedMaterial = materials[1];
         quarryFlareRenderer.sharedMaterial = guidanceMats[0];
         campLampRenderer.sharedMaterial = guidanceMats[0];
         towerLampRenderer.sharedMaterial = guidanceMats[0];
@@ -158,6 +172,13 @@ public class DroneSwap : MonoBehaviour
         rend11.sharedMaterial = materials[0];
         rend12.sharedMaterial = materials[0];
         rend13.sharedMaterial = materials[0];
+        rend14.sharedMaterial = materials[0];
+        rend15.sharedMaterial = materials[0];
+        rend16.sharedMaterial = materials[0];
+        rend17.sharedMaterial = materials[0];
+        rend18.sharedMaterial = materials[0];
+        rend19.sharedMaterial = materials[0];
+        rend20.sharedMaterial = materials[0];
         quarryFlareRenderer.sharedMaterial = guidanceMats[1];
         campLampRenderer.sharedMaterial = guidanceMats[2];
         towerLampRenderer.sharedMaterial = guidanceMats[2];
@@ -166,7 +187,7 @@ public class DroneSwap : MonoBehaviour
         FloodThermals.SetActive(false);
     }
 
-    
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -178,9 +199,9 @@ public class DroneSwap : MonoBehaviour
             foreach (var audioSource in audioSourcesToDisable)
             {
                 audioSource.enabled = false;
-                audioSource.volume = 0.2f; 
+                audioSource.volume = 0.2f;
             }
         }
     }
-    
+
 }
