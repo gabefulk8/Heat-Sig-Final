@@ -1,0 +1,378 @@
+{
+  "scene": "Heat Signature",
+  "levelName": "Heat Signature",
+  "levelNameKey": null,
+  "dateTime": "2023-06-24 21:40:06",
+  "playerData": {
+    "playerPosition": {
+      "x": 319.486237,
+      "y": 11.9637966,
+      "z": -572.3536,
+      "normalized": {
+        "x": 0.4873235,
+        "y": 0.0182487965,
+        "z": -0.873030841,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.0
+      },
+      "magnitude": 655.59375,
+      "sqrMagnitude": 429803.219
+    },
+    "cameraRotation": {
+      "x": 131.199615,
+      "y": -4.599969,
+      "normalized": {
+        "x": 0.999385953,
+        "y": -0.0350393131,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.0
+      },
+      "magnitude": 131.280228,
+      "sqrMagnitude": 17234.498
+    },
+    "characterState": 0,
+    "playerHealth": 100.0
+  },
+  "itemSwitcherData": {
+    "switcherActiveItem": -1,
+    "switcherWeaponItem": -1,
+    "switcher_item_flashlight": {
+      "FlashlightItem": {
+        "batteryPercentage": 100.0
+      }
+    },
+    "switcher_item_lantern": {
+      "LanternItem": {
+        "lightPercentage": 100.0,
+        "lightIntensity": 1.0,
+        "flameAlpha": 0.0
+      }
+    },
+    "switcher_item_candle": {
+      "CandleItem": {
+        "candleScale": 0.00113
+      }
+    },
+    "switcher_item_pistol": {
+      "WeaponController": {
+        "bulletsInMag": 7,
+        "uiShown": false
+      }
+    },
+    "switcher_item_shotgun": {
+      "WeaponController": {
+        "bulletsInMag": 7,
+        "uiShown": false
+      }
+    }
+  },
+  "inventoryData": {
+    "inv_slots_count": 10,
+    "slotsData": {
+      "inv_slot_0": "null",
+      "inv_slot_1": "null",
+      "inv_slot_2": "null",
+      "inv_slot_3": "null",
+      "inv_slot_4": "null",
+      "inv_slot_5": "null",
+      "inv_slot_6": "null",
+      "inv_slot_7": "null",
+      "inv_slot_8": "null",
+      "inv_slot_9": "null"
+    }
+  },
+  "objectivesData": {
+    "activeObjectives": {},
+    "touchedObjectives": {}
+  },
+  "saveablesData": {
+    "SaveObject_62bde07fb41c4ee385cc87800542e6fe": {
+      "position": {
+        "x": 326.506744,
+        "y": 11.0124683,
+        "z": -575.1156,
+        "normalized": {
+          "x": 0.493639737,
+          "y": 0.0166495554,
+          "z": -0.8695071,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 661.4272,
+        "sqrMagnitude": 437485.875
+      }
+    },
+    "SaveObject_f3c092f1440147dca156f05479be2d72": {
+      "position": {
+        "x": 1695.6,
+        "y": 53.09999,
+        "z": -472.7,
+        "normalized": {
+          "x": 0.9628304,
+          "y": 0.0301523283,
+          "z": -0.268418223,
+          "normalized": {
+            "x": 0.9628305,
+            "y": 0.03015233,
+            "z": -0.268418252,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.00000012
+          },
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1761.05774,
+        "sqrMagnitude": 3101324.25
+      }
+    },
+    "TriggerEvent_d35aeeab73e54a3baf3577f73789fb0d": {
+      "isTriggered": false,
+      "triggerCount": 0
+    },
+    "SaveObject_e65c34273e204da3b8e09a14bc865f2d": {
+      "position": {
+        "x": 371.8,
+        "y": 9.289993,
+        "z": -371.7,
+        "normalized": {
+          "x": 0.707091451,
+          "y": 0.0176677648,
+          "z": -0.7069013,
+          "normalized": {
+            "x": 0.7070915,
+            "y": 0.0176677667,
+            "z": -0.7069014,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.00000012
+          },
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 525.816,
+        "sqrMagnitude": 276482.438
+      }
+    },
+    "TriggerEvent_5e6c02df27f04629a65074c21c726793": {
+      "isTriggered": true,
+      "triggerCount": 0
+    },
+    "SaveObject_359779e36e32492ab40557fab12a3d42": {
+      "position": {
+        "x": 999.5,
+        "y": 53.09999,
+        "z": -735.7,
+        "normalized": {
+          "x": 0.8046173,
+          "y": 0.0427465439,
+          "z": -0.5922531,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1242.20544,
+        "sqrMagnitude": 1543074.38
+      }
+    },
+    "TriggerEvent_8e4cb2dcb7464151a6e8a7413cd60a24": {
+      "isTriggered": true,
+      "triggerCount": 0
+    },
+    "TriggerEvent_c888195b07d44a1f8f28ad7024fa1f2f": {
+      "isTriggered": false,
+      "triggerCount": 0
+    },
+    "TriggerEvent_a4fbf8a9480643f687680128a550b3c9": {
+      "isTriggered": true,
+      "triggerCount": 0
+    },
+    "TriggerEvent_169ab0c493854c478215c9f8650bba02": {
+      "isTriggered": false,
+      "triggerCount": 0
+    },
+    "TriggerEvent_2f27e817db8a4b90af642fb59dc4358e": {
+      "isTriggered": true,
+      "triggerCount": 0
+    },
+    "SaveObject_ff13111e8efa47e3bad093514e7fa83e": {
+      "position": {
+        "x": 883.5356,
+        "y": 9.289993,
+        "z": 393.444275,
+        "normalized": {
+          "x": 0.9134769,
+          "y": 0.009604813,
+          "z": 0.406777322,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 967.2227,
+        "sqrMagnitude": 935519.8
+      }
+    },
+    "TriggerEvent_da9b826727604aeab8d218d163956019": {
+      "isTriggered": false,
+      "triggerCount": 0
+    },
+    "SaveObject_e4769cdc7f534c59a346ecd65b7bc60a": {
+      "position": {
+        "x": -425.399963,
+        "y": 31.5,
+        "z": 6.5,
+        "normalized": {
+          "x": -0.997153938,
+          "y": 0.07383721,
+          "z": 0.0152362511,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 426.614136,
+        "sqrMagnitude": 181999.625
+      }
+    },
+    "SaveObject_696e564840924917b437d1ceabc26d45": {
+      "position": {
+        "x": -847.499939,
+        "y": 31.5,
+        "z": -255.200012,
+        "normalized": {
+          "x": -0.9569245,
+          "y": 0.03556711,
+          "z": -0.288150042,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 885.6497,
+        "sqrMagnitude": 784375.438
+      }
+    },
+    "TriggerEvent_18cb996cb07e47bf9200bb62d39b37b4": {
+      "isTriggered": false,
+      "triggerCount": 0
+    },
+    "InteractiveItem_6f721616357246838d28a30a3ea7788e": {
+      "position": {
+        "x": 1677.0304,
+        "y": 45.6579056,
+        "z": 322.073181,
+        "normalized": {
+          "x": 0.981702566,
+          "y": 0.0267272927,
+          "z": 0.188535675,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 1708.28772,
+        "sqrMagnitude": 2918246.75
+      },
+      "rotation": {
+        "x": 350.5483,
+        "y": 212.566681,
+        "z": 0.7968243,
+        "normalized": {
+          "x": 0.855073869,
+          "y": 0.5185026,
+          "z": 0.00194365112,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 409.962616,
+        "sqrMagnitude": 168069.344
+      },
+      "inv_id": 0,
+      "inv_amount": 1,
+      "weapon_id": 0,
+      "examined": false,
+      "customData": {
+        "data": {
+          "CanUse": true,
+          "CanCombine": true
+        }
+      },
+      "stateDisable": true,
+      "floatingIcon": true
+    },
+    "TriggerEvent_965eaf1a77ba409982ac5b9be5ad8148": {
+      "isTriggered": false,
+      "triggerCount": 0
+    },
+    "SaveObject_90ee0f3c1fe64f308d704d03dce47909": {
+      "position": {
+        "x": 1607.4,
+        "y": 49.0,
+        "z": 203.1,
+        "normalized": {
+          "x": 0.9916584,
+          "y": 0.0302297249,
+          "z": 0.125299126,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 1620.92114,
+        "sqrMagnitude": 2627385.5
+      }
+    },
+    "TriggerEvent_1f647defba134b14952a30fb8b14bad5": {
+      "isTriggered": true,
+      "triggerCount": 0
+    },
+    "TriggerEvent_0d3044ef5c9d47f7be89f4c731b50bf0": {
+      "isTriggered": false,
+      "triggerCount": 0
+    },
+    "TriggerEvent_3618c316752642418f759bd2336938ab": {
+      "isTriggered": true,
+      "triggerCount": 0
+    },
+    "GPS_33c3734dd3e341ff9438d88a01fdf3e3": {
+      "QuarryScanned": true,
+      "RangerScanned": true,
+      "CabinScanned": false,
+      "BoatScanned": false,
+      "CampScanned": false,
+      "IntroPlayed": true,
+      "HasRangerTape": false,
+      "HasCabinTape": false,
+      "HasBoatTape": false,
+      "HasCampTape": false,
+      "HasHiddenTape": false,
+      "HasBoltCutters": false,
+      "PatrolStatus": true
+    },
+    "SaveObject_850a269a0e1a41a3a69eac4ca3f6fc9b": {
+      "position": {
+        "x": 319.486237,
+        "y": 11.9637966,
+        "z": -572.3536,
+        "normalized": {
+          "x": 0.4873235,
+          "y": 0.0182487965,
+          "z": -0.873030841,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 655.59375,
+        "sqrMagnitude": 429803.219
+      }
+    },
+    "Autosave_e76b7a9926414612aff5511c0883b4d8": {
+      "isSaved": false
+    },
+    "Autosave_5409231c987f491ea2045a075fb63388": {
+      "isSaved": true
+    },
+    "Autosave_1d3c8244fac74157b3e48fe77c182f14": {
+      "isSaved": false
+    },
+    "Autosave_aa2f484d402a457ebd03d4bfafb20552": {
+      "isSaved": false
+    },
+    "Autosave_7332c21eddf24720816320ad4d6a1427": {
+      "isSaved": false
+    },
+    "Autosave_7748d6c309a248f9af52063ba0b8414f": {
+      "isSaved": false
+    },
+    "Autosave_7f035cef18474305a63ec3e4b597698c": {
+      "isSaved": false
+    }
+  }
+}
