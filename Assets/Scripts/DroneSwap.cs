@@ -83,9 +83,23 @@ public class DroneSwap : MonoBehaviour
             float distance = Vector3.Distance(deathObject.transform.position, transform.position);
             if (distance <= switchDistance)
             {
+                // droneCam.SetActive(false);
+                // mainCam.SetActive(true);
+                // ToMain();
+
+                //enable movement, swap to main camera
+                droneAudio.Stop();
                 droneCam.SetActive(false);
                 mainCam.SetActive(true);
-                ToMain();
+
+                RenderSettings.fogColor = Color.black;
+                RenderSettings.ambientLight = new Color(0.227451f, 0.227451f, 0.227451f);
+
+                charCont.enabled = true;
+
+                ThermalsOFF();
+
+                mouseScript.SetActive(true);
             }
         }
 

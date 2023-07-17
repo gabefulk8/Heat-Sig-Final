@@ -84,7 +84,7 @@ public class CheckMove : MonoBehaviour
         if (footstepSounds.Length > 0 && !audioSource.isPlaying)
         {
             int index = Random.Range(0, footstepSounds.Length);
-            audioSource.PlayOneShot(footstepSounds[index], 3f);
+            audioSource.PlayOneShot(footstepSounds[index], 1f);
         }
     }
 
