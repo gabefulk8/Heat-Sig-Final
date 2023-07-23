@@ -16,9 +16,10 @@ public class CheckMove : MonoBehaviour
 
     public AudioClip[] footstepSounds;
     public AudioClip[] runningFootstepSounds;
-    public float footstepInterval = 0.5f; 
-    private float footstepTimer;
+    public AudioClip[] scream;
 
+    public float footstepInterval = 0.01f; 
+    private float footstepTimer;
 
     void Start()
     {
@@ -54,6 +55,7 @@ public class CheckMove : MonoBehaviour
                 else if (!audioSource.isPlaying)
                 {
                     PlayRunningFootstepSound();
+                    PlayScream();
                 }
             }
         }
@@ -77,6 +79,16 @@ public class CheckMove : MonoBehaviour
         {
             animator.SetBool("IsAttack", false);
         }
+
+
+
+
+
+
+
+
+
+
     }
 
     void PlayFootstepSound()
@@ -85,7 +97,14 @@ public class CheckMove : MonoBehaviour
         {
             int index = Random.Range(0, footstepSounds.Length);
             audioSource.PlayOneShot(footstepSounds[index], 1f);
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                audioSource.Pause();
+            }
         }
+
+        
     }
 
     void PlayRunningFootstepSound()
@@ -93,7 +112,26 @@ public class CheckMove : MonoBehaviour
         if (runningFootstepSounds.Length > 0 && !audioSource.isPlaying)
         {
             int index = Random.Range(0, runningFootstepSounds.Length);
-            audioSource.PlayOneShot(runningFootstepSounds[index], 15f);
+            audioSource.PlayOneShot(runningFootstepSounds[index], 13f);
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                audioSource.Pause();
+            }
+        }
+
+
+    }
+
+    public void PlayScream()
+    {
+        int index = Random.Range(0, scream.Length);
+        audioSource.clip = scream[index];
+        audioSource.volume = 15f;
+        audioSource.Play();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            audioSource.Pause();
         }
     }
 
@@ -108,6 +146,11 @@ public class CheckMove : MonoBehaviour
 
         currentState = newState;
     }
+
+
+
+
+
 
 
 }

@@ -7,11 +7,15 @@ namespace HFPS.Systems
     {
         public Vector3 objTeleportOffset;
 
+        public GameObject patrols;
+
         private void OnTriggerEnter(Collider other)
         {
             if (other.transform.root.GetComponent<PlayerController>())
             {
                 other.transform.root.GetComponent<HealthManager>().InstantDeath();
+
+                patrols.SetActive(false);
             }
 
             if (other.transform.GetComponent<InteractiveItem>())
