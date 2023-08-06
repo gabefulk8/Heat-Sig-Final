@@ -39,6 +39,7 @@ public class DroneSwap : MonoBehaviour
     public Renderer towerLampRenderer;
     public Renderer boatLampRenderer;
     public Renderer campLampRenderer;
+    public Renderer dockLampRenderer;
     public Material[] guidanceMats; // 0 is thermal, 1 flare, 2 lamp
     public GameObject FloodThermals;
 
@@ -168,6 +169,7 @@ public class DroneSwap : MonoBehaviour
         towerLampRenderer.sharedMaterial = guidanceMats[0];
         boatLampRenderer.sharedMaterial = guidanceMats[0];
         cabinLampRenderer.sharedMaterial = guidanceMats[0];
+        dockLampRenderer.sharedMaterial = guidanceMats[0];
         FloodThermals.SetActive(true);
     }
 
@@ -198,6 +200,7 @@ public class DroneSwap : MonoBehaviour
         towerLampRenderer.sharedMaterial = guidanceMats[2];
         boatLampRenderer.sharedMaterial = guidanceMats[2];
         cabinLampRenderer.sharedMaterial = guidanceMats[2];
+        dockLampRenderer.sharedMaterial = guidanceMats[2];
         FloodThermals.SetActive(false);
     }
 

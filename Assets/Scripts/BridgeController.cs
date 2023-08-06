@@ -1,24 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Pathfinding;
 
 public class BridgeController : MonoBehaviour
 {
     public Animator bridgeAnimator;
-
-    void Start()
-    {
-        
-    }
+    public Animator bridgeButtonAnimator;
+    public GameObject player;
+    public GameObject button;
+    public GameObject bridgePrompt;
 
     void Update()
     {
-       // AstarPath.active.Scan();
-
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Vector3.Distance(player.transform.position, button.transform.position) < 3)
         {
-            bridgeAnimator.SetTrigger("TriggerBridge");
+            bridgePrompt.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E)) 
+            {
+                bridgeButtonAnimator.SetTrigger("pushed");
+                Invoke("ExtendBridge", 2.0f);
+            }
         }
+        else
+        {
+            bridgePrompt.SetActive(false);
+        }
+    }
+
+    public void ExtendBridge()
+    {
+        bridgeAnimator.SetTrigger("TriggerBridge");
     }
 }

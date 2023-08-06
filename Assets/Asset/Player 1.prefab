@@ -7156,7 +7156,6 @@ GameObject:
   - component: {fileID: 4747529922466929243}
   - component: {fileID: 4747529922466929240}
   - component: {fileID: 4747529922873994160}
-  - component: {fileID: 3971994668082686025}
   - component: {fileID: 3971994668082686030}
   - component: {fileID: 3971994668082686031}
   - component: {fileID: 3971994668082686028}
@@ -7737,6 +7736,25 @@ MonoBehaviour:
   - {fileID: 2100000, guid: eac718279d55bb14e98dc96296c45800, type: 2}
   - {fileID: 2100000, guid: 3fe452aa5b6463249a4055d3274e506b, type: 2}
   rend: {fileID: 0}
+  rend2: {fileID: 0}
+  rend3: {fileID: 0}
+  rend4: {fileID: 0}
+  rend5: {fileID: 0}
+  rend6: {fileID: 0}
+  rend7: {fileID: 0}
+  rend8: {fileID: 0}
+  rend9: {fileID: 0}
+  rend10: {fileID: 0}
+  rend11: {fileID: 0}
+  rend12: {fileID: 0}
+  rend13: {fileID: 0}
+  rend14: {fileID: 0}
+  rend15: {fileID: 0}
+  rend16: {fileID: 0}
+  rend17: {fileID: 0}
+  rend18: {fileID: 0}
+  rend19: {fileID: 0}
+  rend20: {fileID: 0}
   quarryFlareRenderer: {fileID: 0}
   cabinLampRenderer: {fileID: 0}
   towerLampRenderer: {fileID: 0}
@@ -7755,19 +7773,7 @@ MonoBehaviour:
   scriptToDisable: {fileID: 4747529922873994160}
   deathSoundEffect: {fileID: 0}
   audioSourcesToDisable: []
---- !u!114 &3971994668082686025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1597426478420621454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9766a764104483e4191a8c09809745a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bridgeAnimator: {fileID: 0}
+  switchDistance: 7
 --- !u!114 &3971994668082686030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7807,6 +7813,9 @@ MonoBehaviour:
   boatText: {fileID: 0}
   campText: {fileID: 0}
   playerAudio: {fileID: 4747529922466929243}
+  patrols: {fileID: 0}
+  huntaudio: {fileID: 0}
+  huntText: {fileID: 0}
 --- !u!114 &3971994668082686031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7855,6 +7864,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 567645c21164de041afb02113b4e36a6, type: 3}
   - {fileID: 8300000, guid: 8b72e31c625fac344aa055b5b82f9ce9, type: 3}
   - {fileID: 8300000, guid: bc85a33c80ff6994fa43ddc783b85620, type: 3}
+  footstepsVolume: 0.3
 --- !u!1 &1597427717621366796
 GameObject:
   m_ObjectHideFlags: 0

@@ -78,6 +78,7 @@ public class GPS : MonoBehaviour, ISaveable
     public Text mineDoorText;
     public GameObject mineDoor;
     public GameObject mineDoorTextContainer;
+    public GameObject mineDoorTextHolder;
 
     //sound effects
     public AudioClip paperOpen;
@@ -88,6 +89,9 @@ public class GPS : MonoBehaviour, ISaveable
 
     //Intro Dialogue
     [SerializeField] public bool IntroPlayed = false;
+
+    //Tunnel Door Animator
+    public Animator mineDoorAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -120,9 +124,8 @@ public class GPS : MonoBehaviour, ISaveable
                 mineDoorText.text = "Press 'E' to use Bolt Cutters";
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    fadePanel.SetActive(true);
-                    StartCoroutine(FadeIn(fadePanel.GetComponent<Image>()));
-                    Invoke("ToThankYou", 5);
+                    mineDoorAnimator.SetTrigger("openDoor");
+                    mineDoorTextHolder.SetActive(false);
                 }
             }
         }
@@ -432,12 +435,7 @@ public class GPS : MonoBehaviour, ISaveable
             audioSlider.value = (source2.time / audioLogs[whatLog - 1].length);
             audioSlider.maxValue = audioLogs[whatLog - 1].length;
         }
-
-
     }
-
-    
-
 
     //sound effects
     void playAudio(AudioClip whatsoundeffect)
