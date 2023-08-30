@@ -33,6 +33,7 @@ public class DroneSwap : MonoBehaviour
     public Renderer rend18;
     public Renderer rend19;
     public Renderer rend20;
+    public Renderer rend21;
 
     public Renderer quarryFlareRenderer;
     public Renderer cabinLampRenderer;
@@ -40,6 +41,7 @@ public class DroneSwap : MonoBehaviour
     public Renderer boatLampRenderer;
     public Renderer campLampRenderer;
     public Renderer dockLampRenderer;
+    public Renderer barrackLampRenderer;
     public Material[] guidanceMats; // 0 is thermal, 1 flare, 2 lamp
     public GameObject FloodThermals;
 
@@ -164,12 +166,14 @@ public class DroneSwap : MonoBehaviour
         rend18.sharedMaterial = materials[1];
         rend19.sharedMaterial = materials[1];
         rend20.sharedMaterial = materials[1];
+        rend21.sharedMaterial = materials[1];
         quarryFlareRenderer.sharedMaterial = guidanceMats[0];
         campLampRenderer.sharedMaterial = guidanceMats[0];
         towerLampRenderer.sharedMaterial = guidanceMats[0];
         boatLampRenderer.sharedMaterial = guidanceMats[0];
         cabinLampRenderer.sharedMaterial = guidanceMats[0];
         dockLampRenderer.sharedMaterial = guidanceMats[0];
+        barrackLampRenderer.sharedMaterial = guidanceMats[0];
         FloodThermals.SetActive(true);
     }
 
@@ -195,16 +199,16 @@ public class DroneSwap : MonoBehaviour
         rend18.sharedMaterial = materials[0];
         rend19.sharedMaterial = materials[0];
         rend20.sharedMaterial = materials[0];
+        rend21.sharedMaterial = materials[0];
         quarryFlareRenderer.sharedMaterial = guidanceMats[1];
         campLampRenderer.sharedMaterial = guidanceMats[2];
         towerLampRenderer.sharedMaterial = guidanceMats[2];
         boatLampRenderer.sharedMaterial = guidanceMats[2];
         cabinLampRenderer.sharedMaterial = guidanceMats[2];
         dockLampRenderer.sharedMaterial = guidanceMats[2];
+        barrackLampRenderer.sharedMaterial = guidanceMats[2];
         FloodThermals.SetActive(false);
     }
-
-
 
     private void OnTriggerEnter(Collider other)
     {

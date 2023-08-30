@@ -51,6 +51,7 @@ public class GPS : MonoBehaviour, ISaveable
     [SerializeField] public bool CabinScanned = false;
     [SerializeField] public bool BoatScanned = false;
     [SerializeField] public bool CampScanned = false;
+    [SerializeField] public bool BarrackScanned = false;
 
     //LogBooleans
     [SerializeField] public bool HasRangerTape = false;
@@ -512,6 +513,7 @@ public class GPS : MonoBehaviour, ISaveable
             { "CabinScanned", GetComponent<GPS>().CabinScanned },
             { "BoatScanned", GetComponent<GPS>().BoatScanned },
             { "CampScanned", GetComponent<GPS>().CampScanned },
+            { "BarrackScanned", GetComponent<GPS>().BarrackScanned },
             { "IntroPlayed", GetComponent<GPS>().IntroPlayed },
             { "HasRangerTape", GetComponent<GPS>().HasRangerTape },
             { "HasCabinTape", GetComponent<GPS>().HasCabinTape },
@@ -556,6 +558,13 @@ public class GPS : MonoBehaviour, ISaveable
             locations[4].text = "<s>1694, -436<s>";
             GetComponent<AnimManager>().campPlayed = true;
         }
+        GetComponent<GPS>().BarrackScanned = token["BarrackScanned"].ToObject<bool>();
+        if (BarrackScanned == true)
+        {
+            locations[4].text = "<s>318, -1337<s>";
+            GetComponent<AnimManager>().barrackPlayed = true;
+        }
+
         GetComponent<GPS>().IntroPlayed = token["IntroPlayed"].ToObject<bool>();
 
 
@@ -603,7 +612,6 @@ public class GPS : MonoBehaviour, ISaveable
         if (token["PatrolStatus"].ToObject<bool>() == true)
         {
             GetComponent<AnimManager>().patrols.SetActive(token["PatrolStatus"].ToObject<bool>());
-            GetComponent<AnimManager>().huntText.SetActive(true);
         }
     }
 }

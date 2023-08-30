@@ -9,6 +9,8 @@ public class AnimManager : MonoBehaviour
     public Animator rangerAnimator;
     public Animator shipAnimator;
     public Animator campAnimator;
+    public Animator barrackAnimator;
+    public Animator barrackMonsterAnimator;
 
     public GameObject mainCam;
     public GameObject mineCam;
@@ -16,6 +18,7 @@ public class AnimManager : MonoBehaviour
     public GameObject rangerCam;
     public GameObject shipCam;
     public GameObject campCam;
+    public GameObject barrackCam;
 
     GameObject tempCam;
 
@@ -24,18 +27,23 @@ public class AnimManager : MonoBehaviour
     public bool rangerPlayed = false;
     public bool shipPlayed = false;
     public bool campPlayed = false;
+    public bool barrackPlayed = false;
 
     public GameObject mineFlare;
     public GameObject towerLight;
     public GameObject cabinLight;
     public GameObject boatLight;
     public GameObject campLight;
+    public GameObject barrackLight;
 
     public GameObject mineText;
     public GameObject towerText;
     public GameObject cabinText;
     public GameObject boatText;
     public GameObject campText;
+    public GameObject barrackText;
+
+    public GameObject BarrackMonster;
 
     public AudioSource playerAudio;
 
@@ -106,6 +114,20 @@ public class AnimManager : MonoBehaviour
             }
         } else {
             campText.SetActive(false);
+        }
+
+        if (barrackPlayed == false && Vector3.Distance(this.transform.position, barrackLight.transform.position) < 3) //Barrack Animation Trigger
+        {
+            barrackText.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                playBarrackAnim();
+            }
+        }
+        else
+        {
+            barrackText.SetActive(false);
         }
     }
 
@@ -202,6 +224,27 @@ public class AnimManager : MonoBehaviour
         Invoke("ToMainCam", 7f);
     }
 
+    void playBarrackAnim() //Play Camp Animation
+    {
+        BarrackMonster.SetActive(true);
+        playerAudio.PlayOneShot(GetComponent<DroneSwap>().toDrone);
+        playerAudio.PlayDelayed(0.6f);
+        mainCam.SetActive(false);
+        barrackCam.SetActive(true);
+        RenderSettings.ambientLight = new Color(0.8f, 0.8f, 0.8f);
+        GetComponent<DroneSwap>().ThermalsON();
+        tempCam = barrackCam;
+        barrackAnimator.SetTrigger("PlayBarrackAnim");
+        barrackMonsterAnimator.SetTrigger("MonsterRush");
+        barrackPlayed = true;
+        GetComponent<GPS>().locations[5].text = "<s>318, -1337<s>";
+        RenderSettings.fogColor = Color.white;
+        GetComponent<GPS>().BarrackScanned = true;
+        patrols.SetActive(true);
+        huntText.SetActive(true);
+        Invoke("ToMainCam", 7f);
+    }
+
     void ToMainCam()
     {
         playerAudio.PlayOneShot(GetComponent<DroneSwap>().fromDrone);
@@ -211,6 +254,8 @@ public class AnimManager : MonoBehaviour
         tempCam.SetActive(false);
         RenderSettings.ambientLight = new Color(0.227451f, 0.227451f, 0.227451f);
         RenderSettings.fogColor = Color.black;
+
+        BarrackMonster.SetActive(false);
 
         GetComponent<DroneSwap>().ThermalsOFF();
 
