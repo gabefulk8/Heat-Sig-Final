@@ -44,6 +44,7 @@ public class DroneSwap : MonoBehaviour
     public Renderer barrackLampRenderer;
     public Material[] guidanceMats; // 0 is thermal, 1 flare, 2 lamp
     public GameObject FloodThermals;
+    public Renderer labLight;
 
     private InputAction playerControls;
 
@@ -174,6 +175,7 @@ public class DroneSwap : MonoBehaviour
         cabinLampRenderer.sharedMaterial = guidanceMats[0];
         dockLampRenderer.sharedMaterial = guidanceMats[0];
         barrackLampRenderer.sharedMaterial = guidanceMats[0];
+        labLight.sharedMaterial = guidanceMats[0];
         FloodThermals.SetActive(true);
     }
 
@@ -207,6 +209,7 @@ public class DroneSwap : MonoBehaviour
         cabinLampRenderer.sharedMaterial = guidanceMats[2];
         dockLampRenderer.sharedMaterial = guidanceMats[2];
         barrackLampRenderer.sharedMaterial = guidanceMats[2];
+        labLight.sharedMaterial = guidanceMats[2];
         FloodThermals.SetActive(false);
     }
 
